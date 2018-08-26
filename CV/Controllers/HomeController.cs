@@ -14,5 +14,10 @@ namespace CV.Controllers
 
             return View();
         }
+
+        public ActionResult MyLife()
+        {
+            return View();
+        }
     }
 }

@@ -5,36 +5,28 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/Content/x.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
 </head>
 <body>
-    <div role="navigation">
-
-            <!--
-            Some spans to act as a hamburger.
-
-            They are acting like a real hamburger,
-            not that McDonalds stuff.
-            -->
-            <button id="nav-button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-
-            <div class="navbar">
-                <ul>
-                    <li><a href="#"> Why me? </a></li>
-                    <li><a href="#"> Portfolio </a></li>
-                    <li><a href="#"> About </a></li>
-                </ul>
-            </div>
-            <!--
-            Too bad the menu has to be inside of the button
-            but hey, it's pure CSS magic.
-            -->
-
-        </div>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/x.es6.js"></script>
+<div id="navbar">
+    <ul>
+        <li><a href="#"> Why me? </a></li>
+        <li><a href="#"> Portfolio </a></li>
+        <li><a href="#"> About </a></li>
+    </ul>
+</div>
+<div id="container">
+    <button id="nav-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     @RenderBody()
+
+</div>
 </body>
 </html>

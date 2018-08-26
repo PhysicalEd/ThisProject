@@ -1,36 +1,88 @@
-﻿body {
+﻿.head {
+    display: block;
+    font-size: 40px;
     margin: 0;
     padding: 0;
+    font-weight: bolder;
 }
 
-.navbar {
+.sub-head {
+    display: block;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.white {
+    color: white;
+}
+
+p {
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#container {
+    position: relative;
+    /*padding-left: 100px;
+    padding-right: 100px;*/
+
+}
+
+#navbar {
     background-color: gray;
+    opacity: 0.9;
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 50px;
-}
-
-.navbar ul{
-    margin: 0;
-    padding: 0;
-    float: right;   
-}
-
-.navbar li {
-    display: inline-block; 
-    margin-left: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
     position: relative;
+    z-index: 1;
+    display: none;
+}
+
+#navbar ul{
+    height: 100%;
+
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#navbar li {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
 }
 
 /*Hamburger menu*/
 
 #nav-button{
-    top: 10px;
-    left: 10px;
     position: fixed;
     border: none;
     background-color: transparent;
+    float: right;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
 }
 
 #nav-button:focus {
@@ -40,19 +92,30 @@
 #nav-button span
 {
     display: block;
-    width: 33px;
+    width: 30px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
   
-    background: #cdcdcd;
+    background: black;
     border-radius: 3px;
   
     z-index: 1;
   
-    transform-origin: 4px 0px;
+    /*transform-origin: 4px 0px;
   
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
+                opacity 0.55s ease;*/
 }
+
+.section-content {
+    
+    
+}
+
+.section-content p {
+    padding-top: 50px;
+}
+
+

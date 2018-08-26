@@ -1,0 +1,16 @@
+﻿.section-content {
+    padding-top: 50px;
+    height: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#section0 {
+    background-image: url('img/me.jpg');
+    /*background-image: url('https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/bg2.jpg');*/
+    background-size: cover;
+    background-position: center;
+    /*background-size: 100%;*/
+    background-repeat: no-repeat;
+}
+
