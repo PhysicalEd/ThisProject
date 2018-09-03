@@ -1,6 +1,5 @@
-﻿$(document).ready(() => {
-    $('#nav-button').on('click', () => {
-        //$('#navbar').css('z-index', -1);
+﻿$(document).ready(function() {
+    $('#nav-button').on('click', function(){
         $('#navbar').slideToggle();
     });
 });

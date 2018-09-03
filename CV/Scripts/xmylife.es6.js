@@ -1,7 +1,8 @@
-﻿$(document).ready(() => {
+﻿$(document).ready(function(){
     $('#fullpage').fullpage({
+        anchors: ['1', '2'],
         autoScrolling: true,
-        onLeave: (origin, destination, direction) => {
+        onLeave: function(origin, destination, direction){
             if (origin.index == 0 && direction == 'down') {
                 $('.life').animate({
                         bottom: "0px",
@@ -13,16 +14,21 @@
                     });
             }
         },
-        afterLoad: (origin, destination, direction) => {
+        afterLoad: function(origin, destination, direction){
+
             var loadedSection = this;
 
             //using index
             if (origin !== null && origin.index === 0) {
             }
-        },
+        }
         
 
     //fixedElements: '#navbar'
-});
+    });
+
+    
+
+    //fullpage_api.silentMoveTo('2', 2);
 });
 

@@ -230,3 +230,8 @@ html.fp-enabled,
     height: 100%;*/
     /*display: block*/
 }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: white;
+}

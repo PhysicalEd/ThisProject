@@ -221,9 +221,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bulma.css" />
+    <Content Include="Content\bulma.min.css" />
+    <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fullpage.css" />
+    <Content Include="Content\img\crm.png" />
+    <Content Include="Content\img\EdenCo.png" />
     <Content Include="Content\img\intro.jpg" />
     <Content Include="Content\img\me.jpg" />
+    <Content Include="Content\img\NFTB.png" />
+    <Content Include="Content\img\soonsoon.png" />
+    <Content Include="Scripts\scrolloverflow.min.js" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+    <Content Include="Content\xindex.css" />
     <Content Include="Content\xmylife.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -250,6 +262,7 @@
     <Content Include="Scripts\fullpage.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\Index.es6.js" />
     <Content Include="Scripts\xmylife.es6.js" />
     <Content Include="Scripts\x.es6.js" />
     <Content Include="Web.config" />
@@ -275,6 +288,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\MyLife.cshtml" />
   </ItemGroup>
