@@ -14,3 +14,48 @@
     background-repeat: no-repeat;
 }
 
+
+
+.timeline .timeline-item {
+    padding: 1em;
+}
+
+.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-content {
+    padding: 1em;
+}
+
+.timeline.is-centered .timeline-item .timeline-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 100%;
+    padding: 1em;
+}
+
+.timeline.is-centered .timeline-item .timeline-content .image{
+    float: left;
+    margin-right: 1em;
+}
+
+.timeline.is-centered .timeline-item .timeline-content .image-container{
+    min-width: 100%;
+}
+
+.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-content .image{
+    float: right;
+    margin-left: 1em;
+    margin-right: 0;
+}
+
+
+
+
+.timeline-marker + .timeline-content {
+    background-color: lightgray;
+}
+
+.timeline-marker.is-image + .timeline-content {
+    background-color: transparent;
+}
+

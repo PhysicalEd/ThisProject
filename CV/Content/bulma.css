@@ -9692,3 +9692,8 @@ label.panel-block:hover {
 .select:not(.is-multiple):not(.is-loading)::after {
     border-color: #363636;
 }
+
+.is-128x128 {
+    height: 128px;
+    width: 128px;
+}

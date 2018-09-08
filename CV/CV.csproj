@@ -221,16 +221,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bulma-timeline.min.css" />
     <Content Include="Content\bulma.css" />
     <Content Include="Content\bulma.min.css" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fullpage.css" />
+    <Content Include="Content\img\1.jpg" />
+    <Content Include="Content\img\2.jpg" />
+    <Content Include="Content\img\Cebu.jpg" />
     <Content Include="Content\img\crm.png" />
+    <Content Include="Content\img\dancinguni.jpg" />
     <Content Include="Content\img\EdenCo.png" />
+    <Content Include="Content\img\europe.jpg" />
+    <Content Include="Content\img\grad.jpg" />
     <Content Include="Content\img\intro.jpg" />
+    <Content Include="Content\img\japan.jpg" />
+    <Content Include="Content\img\littleme.jpg" />
     <Content Include="Content\img\me.jpg" />
     <Content Include="Content\img\NFTB.png" />
+    <Content Include="Content\img\qt.jpg" />
+    <Content Include="Content\img\rt.jpg" />
     <Content Include="Content\img\soonsoon.png" />
+    <Content Include="Content\img\wedding.jpg" />
     <Content Include="Scripts\scrolloverflow.min.js" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
@@ -241,7 +253,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
-    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
@@ -282,6 +293,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\HelpPage\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

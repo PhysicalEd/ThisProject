@@ -216,3 +216,7 @@ body {
 .remove-filter {
     filter: brightness(100%);
 }
+
+.has-bottom-border {
+    border-bottom: solid 3px black;
+}

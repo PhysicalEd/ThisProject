@@ -1,7 +1,4 @@
-﻿<script src="~/Scripts/scrolloverflow.min.js"></script>
-@*<script src="~/Scripts/fullpage.js"></script>*@
-<script src="~/Scripts/Index.es6.js"></script>
-@*<link rel="stylesheet" href="~/Content/fullpage.css">*@
+﻿
 <link rel="stylesheet" href="~/Content/fontawesome.css">
 <link rel="stylesheet" href="~/Content/xindex.css">
 
@@ -26,20 +23,136 @@
 
     @*Skills*@
     <div class="hero is-fullheight has-background-white">
-        <div class="container">
-            <div class="level">
-                <h1 class="title is-1 level-left">Check my skillz</h1>
-                <div class="select is-small level-right">
-                    <select>
-                        <option>Skill level</option>
-                        <option>Number of years</option>
-                    </select>
+    <div class="container">
+        <h1 class="title is-1 has-bottom-border">Check my skillz</h1>
+        <div class="content">
+            <div class="select is-small">
+                <select>
+                    <option>Skill level</option>
+                    <option>Number of years</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="tile is-ancestor joke">
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <h2 class="title is-3">Backend</h2>
+                    <skill-item skill="C# .NET" level="2"></skill-item>
+                    <skill-item skill="SQL" level="5"></skill-item>
+
+                    @*<div class="columns">
+                        <div class="column is-3"> C# .NET</div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>*@
+                    @*<div class="columns">
+                        <div class="column is-3"> SQL </div>
+                        <div class="column is-9  is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="5"></div>
+                        </div>
+                    </div>*@
                 </div>
             </div>
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <h2 class="title is-3">Frontend</h2>
+                    <skill-item skill="VueJS" level="2"></skill-item>
+                    <skill-item skill="TypeScript" level="2"></skill-item>
+                    @*<div class="columns">
+                        <div class="column is-3"> VueJS </div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-3"> TypeScript </div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="2"></div>
+
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+
+        <div class="tile is-ancestor joke">
+            <div class="tile is-parent">
+                <div class="tile is-child box is-6">
+                    <h2 class="title is-3">Systems and servers</h2>
+                    <skill-item skill="IIS" level="6"></skill-item>
+                    <skill-item skill="MS-SQL" level="6"></skill-item>
+                    <skill-item skill="Azure" level="2"></skill-item>
+
+                    @*<div class="columns">
+                        <div class="column is-3"> IIS </div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="7"></div>
+
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-3"> MS-SQL </div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="7"></div>
+
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-3"> Azure </div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>*@
+                </div>
+
+                <div class="tile is-child box is-6">
+                    <h2 class="title is-3">Non technical</h2>
+                    <skill-item skill="Customer service" level="7"></skill-item>
+                    <skill-item skill="Team lead" level="5"></skill-item>
+                    <skill-item skill="Project management" level="5"></skill-item>
+
+                    @*<div class="columns">
+                        <div class="column is-3"> Customer service </div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="7"></div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-3"> Team leader</div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="5"></div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-3"> Project management</div>
+                        <div class="column is-9 is-div-centered">
+                            <div class="myprogress has-text-centered" data-years="5"></div>
+                        </div>
+                    </div>*@
+                </div>
 
 
 
-            <div class="tile is-ancestor joke">
+            </div>
+        </div>
+        <div class="content">
+            <span class="has-text-weight-bold">This is obviously a joke.</span> I've always found it strange how people include skill levels in their CV because:
+            <ol>
+                <li> Your level of mastery will always be different to the next guy </li>
+                <li> I don't think you can ever 100% master a tool because people always find different ways of using it outside of its original purpose</li>
+            </ol>
+            <p>
+                Instead, I can show the number of years I've had the chance to hone these skills. Even the number of years don't count so much. <span class="has-text-weight-bold">What really matters is how much an individual has learnt in those years </span>.
+            </p>
+            <a id="showme" class="button" v-on:click="Test">Show me anyway</a>
+        </div>
+    </div>
+
+
+
+        @*<div class="tile is-ancestor joke">
                 <div class="tile is-parent">
                     <div class="tile is-child box">
                         <div class="columns">
@@ -132,21 +245,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content">
-                <span class="has-text-weight-bold">This is obviously a joke.</span> I've always found it strange how people include skill levels in their CV because:
-                <ol>
-                    <li> Your level of mastery will always be different to the next guy </li>
-                    <li> I don't think you can ever 100% master a tool because people always find different ways of using it outside of its original purpose</li>
-                </ol>
-                <p>
-                    Instead, I can show the number of years I've had the chance to hone these skills. Even the number of years don't count so much. <span class="has-text-weight-bold">What really matters is how much an individual has learnt in those years </span>.
-                </p>
-                <a id="showme" class="button">Show me anyway</a>
-            </div>
-        </div>
+            </div>*@
 
     </div>
+
 </div>
 
 
@@ -212,7 +314,7 @@
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Text input">
+                        <input class="input" type="text">
                     </div>
                 </div>
             </div>
@@ -220,31 +322,44 @@
                 <div class="field">
                     <label class="label">Organisation</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Text input">
+                        <input class="input" type="text">
                     </div>
                 </div>
             </div>
-
-
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Contact number</label>
+                    <div class="control">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="columns">
             <div class="column is-12">
                 <div class="field">
                     <label class="label">Message</label>
                     <div class="control">
-                        <textarea class="textarea" placeholder="Say hi or something"></textarea>
+                        <textarea class="textarea" placeholder="Hey Ed, I'd really like to have a chat so I can hire you!"></textarea>
                     </div>
                 </div>
             </div>
         </div>
-        <input type="button" class="button" value="Send"/>
-
+        <input type="button" class="button" value="Send" />
     </div>
-
-
 </div>
 
-
+<script src="~/Scripts/Index.es6.js"></script>
 
 
 @*<div class="section" id="section1" data-anchor="2">
@@ -304,7 +419,6 @@
 
         </div>
     </div>*@
-</div>
 @*<div class="section" id="section2">
         <div class="section-content">
             <div>

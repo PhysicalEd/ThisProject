@@ -1,37 +1,4 @@
 ﻿$(document).ready(function () {
-    //$('#fullpage').fullpage({
-    //    navigation: true,
-    //    sectionSelector: '.section',
-    //    navigationPosition: 'right',
-    //    scrollOverflow: true,
-    //    anchors: ['life', 'skills'],
-    //    fadingEffect: true,
-    //    autoScrolling: true,
-    //    onLeave: function (origin, destination, direction) {
-    //        if (destination.index == 0) {
-    //            $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'white');
-    //        }
-
-    //        if (destination.index != 0) {
-    //            $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', '#333');
-    //        }
-    //    },
-    //    afterLoad: function (origin, destination, direction) {
-
-    //        if (origin !== null && origin.index === 0) {
-    //        }
-    //    }
-    //});
-    $('#project-1-img').on({
-        mouseenter: function () {
-            $('#project-1-desc').css('visibility', 'visible');
-        },
-        mouseleave: function () {
-            $('#project-1-desc').css('visibility', 'hidden');
-
-        }
-    });
-
     // WOrking
     //var delay = 100;
     //$('progress').each(function (index, el) {
@@ -70,18 +37,11 @@
         delay += 100;
     });
 
-
-
-
-
     $('.counter').hide();
     var s = $('#section1').scrollTop();
-    $('#showme').on('click', function() {
-        $('.myprogress').fadeOut('slow', RenderSkillsInYears);
-//        RenderSkillsInYears();
-
-
-    });
+    //$('#showme').on('click', function() {
+    //    $('.myprogress').fadeOut('slow', RenderSkillsInYears);
+    //});
 
     $('#MyLifeStory').on('click', function() {
         $.fn.fullpage.moveTo('skills', 1);
