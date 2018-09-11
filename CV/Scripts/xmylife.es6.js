@@ -1,4 +1,6 @@
-﻿//$(document).ready(function () {
+﻿
+
+//$(document).ready(function () {
 //    Vue.directive('backgroundimage',
 //        {
 //            // When the bound element is inserted into the DOM...

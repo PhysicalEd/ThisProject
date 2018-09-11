@@ -16,7 +16,7 @@
 
 
 
-.timeline .timeline-item {
+/*.timeline .timeline-item {
     padding: 1em;
 }
 
@@ -58,4 +58,39 @@
 .timeline-marker.is-image + .timeline-content {
     background-color: transparent;
 }
+    */
 
+.timeline .timeline-item .timeline-content {
+    padding: 1.5em;
+}
+
+.timeline .timeline-item .timeline-content.is-128-high {
+    height: 128px;
+    width: 100%;
+    padding: 1em 2em 0 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: 100%;
+    margin-left: 4em;
+}
+
+.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-content.is-128-high {
+    height: 128px;
+    width: 100%;
+    padding: 1em 2em 0 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: 100%;
+    margin-right: 4em;
+    margin-left: 0;
+}
+
+
+
+/*.timeline .timeline-item .timeline-content .is-128x128 {
+    background-color: black;
+}*/
