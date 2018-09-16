@@ -1,68 +1,82 @@
-﻿<link rel="stylesheet" href="~/Content/xindex.css">
+﻿@model CV.Models.HomeModel
+<link rel="stylesheet" href="~/Content/xindex.css">
 
+@*<script>
+    var IndexModel = @Html.Raw(Json.Encode(Model));
+</script>*@
 
+<div id="IndexPage">
+@*<a class="button" v-on:click="Test">sfs</a>*@
 
-<div id="">
-
-
-    @*Intro*@
-    <div class="hero is-fullheight" id="section0">
-        @*<div class="container auto-margin">*@
-        <div class="is-div-centered">
-            <h1 class="title is-1 has-text-white">Kia Ora! I'm Ed.</h1>
-            @*<h1 class="title has-text-white">
+@*Intro*@
+<div class="hero is-fullheight" id="section0">
+    @*<div class="container auto-margin">*@
+    <div class="is-div-centered">
+        <h1 class="title is-1 has-text-white">Kia Ora! I'm Ed.</h1>
+        @*<h1 class="title has-text-white">
                     Not just a software developer.
                 </h1>*@
-            <div class="has-text-centered">
-                <a class="subtitle button">Not just a software developer.</a>
-            </div>
-
-            @*<input id="MyLifeStory" class="primary call-to-action" type="button" value="My life story..." />*@
+        <div class="has-text-centered ">
+            @*Not just a software developer.*@
+            <a class="subtitle button is-large button-animation" v-on:click="MyLife">
+                <span>Not just a software developer</span>
+                <span class="icon is-small"><i class="fas fa-angle-double-right"></i></span>
+            </a>
         </div>
-        @*</div>*@
+
+        @*<input id="MyLifeStory" class="primary call-to-action" type="button" value="My life story..." />*@
     </div>
+    @*</div>*@
+</div>
 
 
-    @*About*@
-    <div class="section-margin">
+@*About*@
+<div class="section-margin">
+    <div>
+        @*<div class="container auto-margin">*@
         <div>
-            @*<div class="container auto-margin">*@
-            <div>
-                <h1 class="title is-1 has-bottom-border">About</h1>
-                <div class="sub-section-margin">
-                    <div class="content">
-                        <p class="has-no-bottom-margin">"I wanna be the very best, that no one ever waaaas"</p>
-                        <p>Dun. Dun. DUNUN.</p>
-                        <div class="content is-pulled-right">
-                            <p class="has-no-bottom-margin">Ash Ketchum</p>
-                            <p>Wannabe Pokemon Master</p>
-                        </div>
-                        <div class="is-clearfix"></div>
-                    </div>
+            <h1 class="title is-1 has-bottom-border">About</h1>
+            <div class="sub-section-margin">
+                <div class="content">
+
+                    <p class="is-italic has-text-justified">
+                        "I wanna be the very best, that no one ever waaaas"
+                    </p>
+                    <p class="is-italic has-text-justified">
+                        Dun. Dun. DUDUN.
+                    </p>
+                    @*<div class="section is-pulled-right">
+                                <p class="has-text-weight-bold has-no-bottom-margin">Ash Ketchum</p>
+                                <p class="has-text-weight-bold"> Wannabe Pokemon Master</p>
+                            </div>*@
                 </div>
-
-                <div class="sub-section-margin">
-                    <p> The above quote says it all. For the most part anyway.</p>
-                    <p>I currently work for a software consultancy and design company based in Parnell, Auckland. I’m a keen learner who is passionate about excellent code and innovative and cutting edge software design. I believe that continuous personal and professional growth is a must, and am looking constantly for opportunities to achieve this.</p>
-                </div>
-
-                <div class="has-text-centered">
-                    <a class="subtitle button is-dark" v-on:click="DownloadCV"><span>Curriculum Vitae</span> <span class="icon is-small"> <i class="fas fa-download"></i></span></a>
-                </div>
-
-
             </div>
+
+            <div class="sub-section-margin content">
+                <p> This is Pokemon's infamous opening line. The quote says it all. For the most part anyway.</p>
+                <p>I currently work for a software consultancy and design company based in Parnell, Auckland. I’m a keen learner who is passionate about excellent code and innovative and cutting edge software design. I believe that continuous personal and professional growth is a must, and am looking constantly for opportunities to achieve this.</p>
+            </div>
+
+            <div class="has-text-centered">
+                <a class="subtitle button is-dark is-large button-animation" v-on:click="DownloadCV">
+                    <span>Curriculum Vitae</span>
+                    <span class="icon is-small"> <i class="fas fa-download"></i></span>
+                </a>
+            </div>
+
+
         </div>
     </div>
+</div>
 
 
 
 
-    @*Skills*@
-    <div class="hero has-background-grey-lighter">
-        <div id="skills" class="section-margin">
-            <h1 class="title is-1 has-bottom-border">Skills</h1>
-            @*<div class="content">
+@*Skills*@
+<div class="hero has-background-grey-lighter">
+    <div id="skills" class="section-margin">
+        <h1 class="title is-1 has-bottom-border">Skills</h1>
+        @*<div class="content">
                     <div class="select is-small">
                         <select>
                             <option>Skill level</option>
@@ -71,207 +85,266 @@
                     </div>
                 </div>*@
 
-            <div class="tile is-ancestor">
-                <div class="tile is-parent">
-                    <div class="tile is-child box">
-                        <h2 class="title is-3">Backend</h2>
-                        <skill-item skill="C# .NET" level="2"></skill-item>
-                        <skill-item skill="SQL" level="5"></skill-item>
-                    </div>
-                </div>
-                <div class="tile is-parent">
-                    <div class="tile is-child box">
-                        <h2 class="title is-3">Frontend</h2>
-                        <skill-item skill="VueJS" level="2"></skill-item>
-                        <skill-item skill="TypeScript" level="2"></skill-item>
-                    </div>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <h2 class="title is-3">Backend</h2>
+                    <skill-item skill=".NET MVC and Web API" level="2"></skill-item>
+                    <skill-item skill="SQL" level="5"></skill-item>
+                    <skill-item skill="Data integration" level="5"></skill-item>
                 </div>
             </div>
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <h2 class="title is-3">Frontend</h2>
+                    <skill-item skill="RivetsJS" level="2"></skill-item>
+                    <skill-item skill="VueJS" level="2"></skill-item>
+                    <skill-item skill="TypeScript" level="2"></skill-item>
+                    <skill-item skill="LESS" level="2"></skill-item>
 
-            <div class="tile is-ancestor">
-                <div class="tile is-parent">
-                    <div class="tile is-child box">
-                        <h2 class="title is-3">Systems and servers</h2>
-                        <skill-item skill="IIS" level="6"></skill-item>
-                        <skill-item skill="MS-SQL" level="6"></skill-item>
-                        <skill-item skill="Azure" level="2"></skill-item>
-                    </div>
                 </div>
-
-                <div class="tile is-parent">
-                    <div class="tile is-child box">
-                        <h2 class="title is-3">Non technical</h2>
-                        <skill-item skill="Client management" level="7"></skill-item>
-                        <skill-item skill="Team management" level="5"></skill-item>
-                        <skill-item skill="Project management" level="5"></skill-item>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content">
-                <span class="has-text-weight-bold">This is obviously a joke.</span> I've always found it strange how people include skill levels in their CV because:
-                <ol>
-                    <li> The concept of mastery or being good at something is extremely subjective </li>
-                    <li> There will always be a different or better way of using or applying something </li>
-                </ol>
-                <p>
-                    To say that I am “good” or “not so good”, is limiting. Instead, I can show the <a id="showme">number of years</a> I've had the opportunity to hone these skills.
-                </p>
-                <p>
-                    Although… even the number of years don't count for much. What really matters is how much an individual has learned in those years. I believe this can only be seen through one’s work and hard earned references.
-                </p>
-            </div>
-            <div class="has-text-centered">
-                <a class="subtitle button">Employment history</a>
             </div>
         </div>
 
-    </div>
-
-
-
-
-    @*Projects*@
-    <div class="is-fullheight has-background-white">
-        <div class="section-margin">
-            <h1 class="title is-1 has-bottom-border">Latest projects</h1>
-            <div class="tile is-ancestor">
-                <div class="tile is-parent" v-on:click.prevent="MT4">
-                    <div class="tile is-child box clickable grayscale">
-                        <div class="image is-128x128 level-left is-div-centered level-item">
-                            <img class="" src="~/Content/img/soonsoon.png" />
-                        </div>
-                        <div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="tile is-parent">
-                    <div class="tile is-child box clickable grayscale">
-                        <div class="image is-128x128 is-div-centered level-item">
-                            <img class="" src="~/Content/img/nftb.png" />
-                        </div>
-                        <div>
-                            <p>
-
-                            </p>
-                        </div>
-                    </div>
-
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <h2 class="title is-3">Systems and servers</h2>
+                    <skill-item skill="IIS" level="6"></skill-item>
+                    <skill-item skill="MS-SQL" level="6"></skill-item>
+                    <skill-item skill="Azure" level="2"></skill-item>
                 </div>
             </div>
-            <div class="tile is-ancestor">
-                <div class="tile is-parent">
-                    <div class="tile is-child box clickable grayscale">
-                        <div class="image is-128x128 is-div-centered level-item">
-                            <img class="" src="~/Content/img/crm.png" />
-                        </div>
-                        <div>
-                            <p>
 
-                            </p>
-                        </div>
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <h2 class="title is-3">Non technical</h2>
+                    <skill-item skill="Client management" level="7"></skill-item>
+                    <skill-item skill="Team management" level="5"></skill-item>
+                    <skill-item skill="Project management" level="5"></skill-item>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <span class="has-text-weight-bold">This is obviously a joke.</span> I've always found it strange how people include skill levels in their CV because:
+            <ol>
+                <li> The concept of mastery or being good at something is extremely subjective </li>
+                <li> There will always be a different or better way of using or applying something </li>
+            </ol>
+            <p>
+                To say that I am “good” or “not so good”, is limiting. Instead, I can show the <a id="showme" v-on:click="RenderSkillsInYears">number of years</a> I've had the opportunity to hone these skills.
+            </p>
+            <p>
+                Although… even the number of years don't count for much. What really matters is how much an individual has learned in those years. I believe this can only be seen through one’s work and hard earned references.
+            </p>
+        </div>
+        <div class="has-text-centered">
+            <a class="subtitle button is-large button-animation">
+                <span>Employment history</span>
+                <span class="icon is-small"> <i class="fas fa-angle-double-right"></i></span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+@*Projects*@
+<div class="is-fullheight has-background-white">
+    <div class="section-margin">
+        <h1 class="title is-1 has-bottom-border">Latest projects</h1>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent" v-on:click.prevent="MT4">
+                <div class="tile is-child box clickable grayscale">
+                    <div class="image is-128x128 level-left is-div-centered level-item">
+                        <img class="" src="~/Content/img/soonsoon.png" />
+                    </div>
+                    <div>
                     </div>
                 </div>
 
-                <div class="tile is-parent">
-                    <div class="tile is-child box clickable grayscale">
-                        <div class="image is-128x128 is-div-centered level-item">
-                            <img class="" src="~/Content/img/thisProject.png" />
-                        </div>
-                        <div>
-                            <p>
+            </div>
 
-                            </p>
-                        </div>
+            <div class="tile is-parent">
+                <div class="tile is-child box clickable grayscale">
+                    <div class="image is-128x128 is-div-centered level-item">
+                        <img class="" src="~/Content/img/nftb.png" />
+                    </div>
+                    <div>
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child box clickable grayscale">
+                    <div class="image is-128x128 is-div-centered level-item">
+                        <img class="" src="~/Content/img/crm.png" />
+                    </div>
+                    <div>
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile is-parent">
+                <div class="tile is-child box clickable grayscale">
+                    <div class="image is-128x128 is-div-centered level-item">
+                        <img class="" src="~/Content/img/thisProject.png" />
+                    </div>
+                    <div>
+                        <p>
+
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-    @*Contact*@
-    <div class="hero is-fullheight has-background-grey-lighter">
-        <div class="section-margin">
-            <h1 class="title is-1 has-bottom-border">Contact</h1>
-            <div class="columns">
-                <div class="column is-6">
-                    <div class="field">
-                        <label class="label">Name</label>
-                        <div class="control">
-                            <input class="input" type="text">
+@*Contact*@
+<div class="hero has-background-grey-lighter">
+    <div class="section-margin">
+        <h1 class="title is-1 has-bottom-border">Contact</h1>
+        <div class="columns">
+
+            <div class="column is-8">
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">Company</label>
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="column is-6">
-                    <div class="field">
-                        <label class="label">Organisation</label>
-                        <div class="control">
-                            <input class="input" type="text">
+                <div class="columns">
+                    <div class="column is-12">
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Hey Ed, I'd really like to have a chat so I can hire you!"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <input type="button" class="button" value="Send" />
+
             </div>
-            <div class="columns">
-                <div class="column is-6">
-                    <div class="field">
-                        <label class="label">Contact number</label>
-                        <div class="control">
-                            <input class="input" type="text">
-                        </div>
-                    </div>
+
+            <div class="column is-4 .is-pulled-bottom">
+                <div>
+                    <a href="mailto:ong.edward23@gmail.com">
+                        <span class="icon"><i class="far fa-envelope"></i></span>
+                        <span>ong.edward23@gmail.com</span>
+                    </a>
                 </div>
-                <div class="column is-6">
-                    <div class="field">
-                        <label class="label">Email</label>
-                        <div class="control">
-                            <input class="input" type="text">
-                        </div>
-                    </div>
+
+                <div>
+                    <a href="tel:02102441729">
+                        <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                        <span>02102441729</span>
+                    </a>
                 </div>
+
+
             </div>
-            <div class="columns">
-                <div class="column is-12">
-                    <div class="field">
-                        <label class="label">Message</label>
-                        <div class="control">
-                            <textarea class="textarea" placeholder="Hey Ed, I'd really like to have a chat so I can hire you!"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <input type="button" class="button" value="Send" />
+
         </div>
-    </div>
 
-    @*<div id="ProjectModal" class="modal">
+        @*<div class="columns">
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">Organisation</label>
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">Contact number</label>
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-12">
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Hey Ed, I'd really like to have a chat so I can hire you!"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+    </div>
+</div>
+
+@*<div id="ProjectModal" class="modal">
             <div class="modal-background"></div>
                 <div id="ProjectContent" class="modal-content">
                 </div>
                 <button class="modal-close is-large" v-on:click="CloseModal"></button>
         </div>*@
 
-    <div id="ProjectModal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
-                <button class="delete" v-on:click="CloseModal"></button>
-            </header>
-            <section id="ProjectContent" class="modal-card-body"></section>
-            @*<footer class="modal-card-foot">
+<div id="ProjectModal" class="modal">
+    <div class="modal-background" v-on:click="CloseModal"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+            <button class="delete" v-on:click="CloseModal"></button>
+        </header>
+        <section id="ProjectContent" class="modal-card-body"></section>
+        @*<footer class="modal-card-foot">
                     <button class="button is-success">Save changes</button>
                     <button class="button">Cancel</button>
                 </footer>*@
-        </div>
     </div>
+</div>
 
-    @*<script src="~/Scripts/Index.js"></script>*@
+@*<script src="~/Scripts/Index.js"></script>*@
 
 
-    @*<div class="section" id="section1" data-anchor="2">
+@*<div class="section" id="section1" data-anchor="2">
             <div class="section-content-80 is-vertical-center">
                 <div class="tile is-ancestor is-fullheight">
                     <div class="tile is-4 is-vertical is-parent is-fullheight">
@@ -328,7 +401,7 @@
 
             </div>
         </div>*@
-    @*<div class="section" id="section2">
+@*<div class="section" id="section2">
             <div class="section-content">
                 <div>
                     <span class="head">1988</span>

@@ -1,0 +1,87 @@
+﻿<div class="hero has-background-grey-lighter">
+    <div class="section-margin">
+        <h1 class="title is-1 has-bottom-border">Employment history</h1>
+        <div>
+            <h3 class="title is-3">Blackball software - Software developer</h3>
+            <h3 class="subtitle is-6">2016 - Current</h3>
+            <div class="section">
+                <a class="button" v-on:click="ShowReference('Blackball')">See what Blackball has to say about me</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="hero">
+    <div class="section-margin">
+        <h3 class="title is-3">ITC / LMS - Technical manager</h3>
+        <h3 class="subtitle is-6">2014 - 2016</h3>
+        <div class="section">
+            <div class="section">
+                <a class="button" v-on:click="ShowReference('ITC')">See what ITC has to say about me</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*EO TODO - It is preferable to have the modal to be loaded from another file. Keep it DRY*@
+<div id="ReferenceModal" class="modal modal-fx-fadeInScale">
+    <div class="modal-background" v-on:click="CloseModal"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+            <button class="delete" v-on:click="CloseModal"></button>
+        </header>
+        <section id="ReferenceContent" class="modal-card-body"></section>
+        <footer class="modal-card-foot">
+            <a id="DownloadReferenceModal" class="button" v-on:click="DownloadReference">Download full reference</a>
+        </footer>
+    </div>
+</div>
+
+@*EO TODO - These should not be here. It is not semantically correct*@
+@*I hope you don't find me here...*@
+<div id="Blackball" v-show="false">
+    <div class="section-margin">
+        <div class="content">
+            <p class="is-italic has-text-justified">
+                “In all aspects of his job, Ed has proven himself to be an exceptional staff member. He has an aptitude and instinct for software development which allows him to both follow instructions and fill in the blanks where necessary. In many cases, I have been delighted when Ed has come forward to query, and improve upon, some of the design decisions proposed in his tickets. Despite being a junior developer, I quickly came to trust him with very little oversight.
+            </p>
+            <p class="is-italic has-text-justified">
+                Further to his development skills, Ed excels in the peripheral skills which are just as essential in a small development team. His client interactions are exceptional and he is a fantastic team member - ready to knuckle down when the going gets tough, then celebrate with a team lunch and a laugh afterwards."
+            </p>
+            <br/>
+            <br />
+            <div class="section">
+                <p class="is-pulled-right has-text-weight-bold">
+                    Ben Liebert, Founder
+                    Blackball Software
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*I am a ninja. You cannot see me*@
+<div id="ITC" v-show="false">
+    <div class="section-margin">
+        <div class="content">
+            <p class="is-italic has-text-justified">
+                ““In 22 years of business I have not experienced another employee who consistently provided such a high level of value over an equally broad range. As a colleague and workmate Edward’s character inspires loyalty, respect and friendship in those around him. His technical ability combined with an unfailingly moderate and positive character have made him a natural leader in the organisation.
+            </p>
+
+            <p class="is-italic has-text-justified">
+                Very seldom a company is presented with the opportunity to engage a truly exceptional team member. If your organisation is presented with this reference you can be assured this is one of those rare moments.”
+            </p>
+            
+            <br/>
+            <br />
+            
+            <p class="is-pulled-right has-text-weight-bold">
+                Shane Gregory, Director
+                ITC, LMS
+            </p>
+        </div>
+    </div>
+</div>

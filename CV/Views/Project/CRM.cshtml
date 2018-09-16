@@ -1,61 +1,160 @@
-﻿
-
-<div>
-    <div class="hero has-crm-color is-small is-bold">
-        <div class="hero-body section-margin">
-            <h4 class="has-text-white">CRM</h4>
-        </div>
-    </div>
-
-    <div class="section-margin">
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">1 - the problem</h6>
-            </div>
-            <div class="column is-10">
-                <p>
-                    The company I worked for had an internal CRM system written in Delphi as a desktpp application and was backed by an MSAccess database. This eventually became problematic because of compatibility issues with running the application on different Windows desktop platforms.
-                </p>
-            </div>
-        </div>
-
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">2 - the solution</h6>
-            </div>
-            <div class="column is-10">
-                <p>
-                    Rewrite the front end application to a web application. We converted the database to an MSSQL database and went from there.
-                </p>
-            </div>
-        </div>
-
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">Screenshots</h6>
-
-            </div>
-            <div class="column is-10">
-                <div class="columns">
-                    <div class="screenshot-image column">
-                        <img src="/Content/img/crm2.png" />
-                    </div>
-                    <div class="screenshot-image column">
-                        <img src="/Content/img/crm2.png" />
-                    </div>
-
-                </div>
-                <div class="columns">
-                    <div class="screenshot-image column">
-                        <img src="/Content/img/crm2.png" />
-                    </div>
-                    <div class="screenshot-image column">
-                        <img src="/Content/img/crm2.png" />
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
+﻿<div class="hero is-medium is-primary">
+    <div class="hero-body">
+        CRM - 2016
     </div>
 </div>
+
+<div class="section-margin">
+    <div class="tile is-ancestor">
+        <div class="tile is-6 is-parent">
+            <div class="tile is-child box">
+                <p class="title">Overview</p>
+                <p> This is the first web application project I was involved in. It was a way to transition from my non-dev to a dev-job. </p>
+            </div>
+
+        </div>
+        <div class="tile  is-vertical is-parent">
+            <div class="tile is-child box">
+                <p class="title">Problem</p>
+                <p> ITC, my previous employer had an internal CRM system written in Delphi as a desktop application. This was problematic due to compatibility issues with running the application on different platforms. </p>
+            </div>
+            <i class="fas fa-arrow-down has-text-centered"></i>
+            <div class="tile is-child box">
+                <p class="title">Solution</p>
+                <p> Rewrite the application as a web application. We converted the database to an MSSQL database and went from there.</p>
+            </div>
+            <i class="fas fa-arrow-down has-text-centered"></i>
+        </div>
+    </div>
+    <div class="box">
+        <h3 class="title is-3 has-bottom-border">What I learned</h3>
+        <div class="content">
+            <h6 class="title is-6"> Nice introduction to C# .NET MVC </h6>
+            <p>
+                This was a good introduction to the .NET stack. My friend showed me the ropes and I think this has helped me transition into my first developer job.
+            </p>
+        </div>
+
+        <div class="content">
+            <h6 class="title is-6"> Change should be managed </h6>
+            <p>
+                No matter how cool or modern looking your application is, people tend to choose what they are used to over a new, fresh look. With the old desktop application written years prior, the application looked a little outdated. 
+                Using Bootstrap in this project, we initially tried to make the UI a bit more modern by using different layouts. When we presented this, we were advised to make the layout as similar to the old application as possible.
+            </p>
+            <p>
+                There is definitely nothing wrong with this, at the end of the day, the customer is always right. It was a good reminder that change should always be managed to ensure that the client both gets what they want as well as directing them to new and fresh ideas.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+
+@*<div>
+        <div class="hero has-nftb-color is-small is-bold">
+            <div class="hero-body section-margin">
+                <h4 class="">CRM</h4>
+            </div>
+        </div>
+
+        <div class="section-margin">
+            <div class="columns sub-section-margin">
+                <div class="column is-2">
+                    <h6 class="subtitle is-6 is-italic">1 - the problem</h6>
+                </div>
+                <div class="column is-10">
+                    <p>
+                        The company I worked for had an internal CRM system written in Delphi as a desktpp application and was backed by an MSAccess database. This eventually became problematic because of compatibility issues with running the application on different Windows desktop platforms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns sub-section-margin">
+                <div class="column is-2">
+                    <h6 class="subtitle is-6 is-italic">2 - the solution</h6>
+                </div>
+                <div class="column is-10">
+                    <p>
+                        Rewrite the front end application to a web application. We converted the database to an MSSQL database and went from there.
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns sub-section-margin">
+                <div class="column is-2">
+                    <h6 class="subtitle is-6 is-italic">Screenshots</h6>
+
+                </div>
+                <div class="column is-10">
+                    <div class="columns">
+                        <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                        <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                    </div>
+                    <div class="columns">
+                        <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                        <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="hero is-info is-small is-bold">
+            <div class="hero-body section-margin">
+                <h4 class="">CRM</h4>
+            </div>
+        </div>
+
+        <div class="section-margin">
+            <div class="columns sub-section-margin">
+                <div class="column is-2">
+                    <h6 class="subtitle is-6 is-italic">1 - the problem</h6>
+                </div>
+                <div class="column is-10">
+                    <p>
+                        The company I worked for had an internal CRM system written in Delphi as a desktpp application and was backed by an MSAccess database. This eventually became problematic because of compatibility issues with running the application on different Windows desktop platforms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns sub-section-margin">
+                <div class="column is-2">
+                    <h6 class="subtitle is-6 is-italic">2 - the solution</h6>
+                </div>
+                <div class="column is-10">
+                    <p>
+                        Rewrite the front end application to a web application. We converted the database to an MSSQL database and went from there.
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns sub-section-margin">
+                <div class="column is-2">
+                    <h6 class="subtitle is-6 is-italic">Screenshots</h6>
+
+                </div>
+                <div class="column is-10">
+                    <div class="columns">
+                        <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                        <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                    </div>
+                    <div class="columns">
+                        <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                        <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>*@
+
+
+
+
+
+
+

@@ -194,6 +194,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\europe1.jpg" />
+    <Content Include="Content\img\wedding1.jpg" />
+    <Content Include="Content\modal-fx.min.css" />
     <Content Include="Content\bulma-timeline.min.css" />
     <Content Include="Content\bulma.css" />
     <Content Include="Content\bulma.min.css" />
@@ -237,7 +240,7 @@
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\Index.js" />
-    <Content Include="Scripts\xmylife.es6.js" />
+    <Content Include="Scripts\mylife.js" />
     <Content Include="Scripts\x.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -275,6 +278,8 @@
     <Content Include="webfonts\fa-solid-900.woff2" />
     <Content Include="App_Data\EdwardOngCV.pdf" />
     <Content Include="Content\fonts\Dense-Regular.otf" />
+    <Content Include="App_Data\BlackballReference.pdf" />
+    <Content Include="App_Data\ITCReference.pdf" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\MyLife.cshtml" />
     <Content Include="Views\Project\Projects.cshtml" />
@@ -282,6 +287,9 @@
     <Content Include="Views\Project\NFTB.cshtml" />
     <Content Include="Views\Project\MT4.cshtml" />
     <Content Include="Views\Project\ThisProject.cshtml" />
+    <Content Include="Views\Home\EmploymentHistory.cshtml" />
+    <Content Include="Views\Home\Testimonial.cshtml" />
+    <Content Include="Views\Home\Landing.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

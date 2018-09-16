@@ -17,22 +17,26 @@ namespace CV.Controllers
 
         public ActionResult CRM()
         {
+            return View();
             return PartialView("CRM");
         }
 
         public ActionResult MT4()
         {
             //return PartialView("MT4");
-            return View("MT4");
+            return PartialView("MT4");
         }
 
         public ActionResult NFTB()
         {
+            return View();
+
             return PartialView("NFTB");
         }
 
         public ActionResult ThisProject()
         {
+            return View();
             return PartialView("ThisProject");
         }
     }
