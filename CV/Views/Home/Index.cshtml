@@ -6,32 +6,52 @@
 </script>*@
 
 <div id="IndexPage">
-@*<a class="button" v-on:click="Test">sfs</a>*@
 
 @*Intro*@
-<div class="hero is-fullheight" id="section0">
-    @*<div class="container auto-margin">*@
+<div class="hero is-fullheight has-background-grey-lighter" id="IntroSection" v-backgroundimage-contain="'me.jpg'">
     <div class="is-div-centered">
-        <h1 class="title is-1 has-text-white">Kia Ora! I'm Ed.</h1>
-        @*<h1 class="title has-text-white">
-                    Not just a software developer.
-                </h1>*@
-        <div class="has-text-centered ">
-            @*Not just a software developer.*@
+        <h1 class="title is-1">Kia Ora! I'm Ed.</h1>
+
+        <div class="has-text-centered" >
             <a class="subtitle button is-large button-animation" v-on:click="MyLife">
-                <span>Not just a software developer</span>
+                <span>Not just a <span v-html="CurrentPersona" ></span></span>
                 <span class="icon is-small"><i class="fas fa-angle-double-right"></i></span>
             </a>
         </div>
-
-        @*<input id="MyLifeStory" class="primary call-to-action" type="button" value="My life story..." />*@
     </div>
-    @*</div>*@
 </div>
+    
+@*<div class="columns">
+    <div class="column">
+        <div class="image one-third-vh" v-backgroundimage="'wife.jpg'"></div>
+    </div>
+    <div class="column">
+        <div class="image one-third-vh" v-backgroundimage="'father.jpg'"></div>
+    </div>
+    <div class="column">
+        <div class="image one-third-vh" v-backgroundimage="'father.jpg'"></div>
+    </div>
+</div>
+<div class="one-third-vh box">
+    <div class="">jjj</div>
+</div>
+    <div class="columns">
+        <div class="column">
+            <div class="image one-third-vh" v-backgroundimage="'wannabephotographer.jpg'"></div>
+        </div>
+        <div class="column">
+            <div class="image one-third-vh" v-backgroundimage="'wannabephotographer.jpg'"></div>
+            
+        </div>
+        <div class="column">
+            <div class="image one-third-vh" v-backgroundimage="'dancer.jpg'"></div>
+            
+        </div>
+    </div>*@
 
 
 @*About*@
-<div class="section-margin">
+<div id="AboutSection" class="section-margin">
     <div>
         @*<div class="container auto-margin">*@
         <div>
@@ -58,7 +78,7 @@
             </div>
 
             <div class="has-text-centered">
-                <a class="subtitle button is-dark is-large button-animation" v-on:click="DownloadCV">
+                <a class="subtitle button has-background-grey-lighter is-large button-animation" v-on:click="DownloadCV">
                     <span>Curriculum Vitae</span>
                     <span class="icon is-small"> <i class="fas fa-download"></i></span>
                 </a>
@@ -73,8 +93,8 @@
 
 
 @*Skills*@
-<div class="hero has-background-grey-lighter">
-    <div id="skills" class="section-margin">
+<div id="SkillsSection" class="hero has-background-grey-lighter">
+    <div id="Skills" class="section-margin">
         <h1 class="title is-1 has-bottom-border">Skills</h1>
         @*<div class="content">
                     <div class="select is-small">
@@ -89,19 +109,53 @@
             <div class="tile is-parent">
                 <div class="tile is-child box">
                     <h2 class="title is-3">Backend</h2>
-                    <skill-item skill=".NET MVC and Web API" level="2"></skill-item>
-                    <skill-item skill="SQL" level="5"></skill-item>
-                    <skill-item skill="Data integration" level="5"></skill-item>
+                    <div class ="columns">
+                        <div class ="column is-3">.NET MVC and Web API</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>
+                    <div class ="columns">
+                        <div class ="column is-3">SQL</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="4"></div>
+                        </div>
+                    </div>
+                    <div class ="columns">
+                        <div class ="column is-3">Third party data integration</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="tile is-parent">
                 <div class="tile is-child box">
                     <h2 class="title is-3">Frontend</h2>
-                    <skill-item skill="RivetsJS" level="2"></skill-item>
-                    <skill-item skill="VueJS" level="2"></skill-item>
-                    <skill-item skill="TypeScript" level="2"></skill-item>
-                    <skill-item skill="LESS" level="2"></skill-item>
-
+                    <div class ="columns">
+                        <div class ="column is-3">RivetsJS</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>
+                    <div class ="columns">
+                        <div class ="column is-3">VueJS(1.x)</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>
+                    <div class ="columns">
+                        <div class ="column is-3">TypeScript</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>
+                    <div class ="columns">
+                        <div class ="column is-3">LESS</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="2"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,54 +164,87 @@
             <div class="tile is-parent">
                 <div class="tile is-child box">
                     <h2 class="title is-3">Systems and servers</h2>
-                    <skill-item skill="IIS" level="6"></skill-item>
-                    <skill-item skill="MS-SQL" level="6"></skill-item>
-                    <skill-item skill="Azure" level="2"></skill-item>
+                    <div class ="columns">
+                        <div class ="column is-3">IIS</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="6"></div>
+                        </div>
+                    </div>
+                    <div class ="columns">
+                        <div class ="column is-3">MS-SQL</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="6"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="tile is-parent">
                 <div class="tile is-child box">
                     <h2 class="title is-3">Non technical</h2>
-                    <skill-item skill="Client management" level="7"></skill-item>
+                    <div class ="columns">
+                        <div class ="column is-3">Client management</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="6"></div>
+                        </div>
+                    </div>
+                    <div class ="columns">
+                        <div class ="column is-3">Team management</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="3"></div>
+                        </div>
+                    </div>
+                    <div class ="columns">
+                        <div class ="column is-3">Project management</div>
+                        <div class ="column is-9 is-div-centered">
+                            <div class ="myprogress has-text-centered" data-years="4"></div>
+                        </div>
+                    </div>
+                    @*<skill-item skill="Client management" level="7"></skill-item>
                     <skill-item skill="Team management" level="5"></skill-item>
-                    <skill-item skill="Project management" level="5"></skill-item>
+                    <skill-item skill="Project management" level="5"></skill-item>*@
                 </div>
             </div>
         </div>
 
         <div class="content">
-            <span class="has-text-weight-bold">This is obviously a joke.</span> I've always found it strange how people include skill levels in their CV because:
-            <ol>
-                <li> The concept of mastery or being good at something is extremely subjective </li>
-                <li> There will always be a different or better way of using or applying something </li>
-            </ol>
-            <p>
-                To say that I am “good” or “not so good”, is limiting. Instead, I can show the <a id="showme" v-on:click="RenderSkillsInYears">number of years</a> I've had the opportunity to hone these skills.
-            </p>
-            <p>
-                Although… even the number of years don't count for much. What really matters is how much an individual has learned in those years. I believe this can only be seen through one’s work and hard earned references.
-            </p>
+            <div v-show="IsJoking">
+                <span class="has-text-weight-bold">This is obviously a joke.</span> I've always found it strange how people include skill levels in their CV because:
+                <ol>
+                    <li> The concept of mastery or being good at something is extremely subjective </li>
+                    <li> There will always be a different or better way of using or applying something </li>
+                </ol>
+                <p>
+                    To say that I am “good” or “not so good”, is limiting. Instead, I can show the <a href="#Skills" v-on:click="RenderSkillsInYears">number of years</a> I've had the opportunity to hone these skills.
+                </p>
+            </div>
+            <div v-show="!IsJoking">
+                <p>
+                    Although… even the number of years don't count for much. What really matters is how much an individual has learned in those years. I believe this can only be seen through one’s work and hard earned references.
+                </p>
+                <div class="has-text-centered">
+                    <a class="subtitle button is-large button-animation" v-on:click="ShowReferences">
+                        <span>See what people say about me</span>
+                        <span class="icon is-small"> <i class="fas fa-angle-double-right"></i></span>
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <div class="has-text-centered">
-            <a class="subtitle button is-large button-animation">
-                <span>Employment history</span>
-                <span class="icon is-small"> <i class="fas fa-angle-double-right"></i></span>
-            </a>
-        </div>
+
     </div>
 
 </div>
 
 
 @*Projects*@
-<div class="is-fullheight has-background-white">
+<div id="ProjectsSection" class="is-fullheight has-background-white">
     <div class="section-margin">
         <h1 class="title is-1 has-bottom-border">Latest projects</h1>
         <div class="tile is-ancestor">
             <div class="tile is-parent" v-on:click.prevent="MT4">
                 <div class="tile is-child box clickable grayscale">
-                    <div class="image is-128x128 level-left is-div-centered level-item">
+                    <div class="image is-128x128 is-div-centered level-item">
                         <img class="" src="~/Content/img/soonsoon.png" />
                     </div>
                     <div>
@@ -166,7 +253,7 @@
 
             </div>
 
-            <div class="tile is-parent">
+            <div class="tile is-parent" v-on:click.prevent="NFTB">
                 <div class="tile is-child box clickable grayscale">
                     <div class="image is-128x128 is-div-centered level-item">
                         <img class="" src="~/Content/img/nftb.png" />
@@ -180,8 +267,8 @@
 
             </div>
         </div>
-        <div class="tile is-ancestor">
-            <div class="tile is-parent">
+        <div class="tile is-ancestor" >
+            <div class="tile is-parent" v-on:click.prevent="CRM">
                 <div class="tile is-child box clickable grayscale">
                     <div class="image is-128x128 is-div-centered level-item">
                         <img class="" src="~/Content/img/crm.png" />
@@ -194,7 +281,7 @@
                 </div>
             </div>
 
-            <div class="tile is-parent">
+            <div class="tile is-parent" v-on:click.prevent="ThisProject">
                 <div class="tile is-child box clickable grayscale">
                     <div class="image is-128x128 is-div-centered level-item">
                         <img class="" src="~/Content/img/thisProject.png" />
@@ -212,10 +299,24 @@
 
 
 @*Contact*@
-<div class="hero has-background-grey-lighter">
-    <div class="section-margin">
-        <h1 class="title is-1 has-bottom-border">Contact</h1>
-        <div class="columns">
+<div id="ContactSection" class="hero is-fullheight has-background-grey-lighter">
+        <div class="section-margin">
+            <h1 class="title is-1 has-bottom-border">Contact</h1>
+        </div>
+        <div class='auto-margin'>
+            <a class="button" href="mailto:ong.edward23@gmail.com">
+                <span class="icon"><i class="far fa-envelope"></i></span>
+                <span>ong.edward23@gmail.com</span>
+            </a>
+            <a class="button" href="tel:02102441729">
+                <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                <span>02102441729</span>
+            </a>
+        </div>
+
+    
+</div>
+        @*<div class="columns">
 
             <div class="column is-8">
                 <div class="columns">
@@ -268,7 +369,7 @@
 
             </div>
 
-        </div>
+        </div>*@
 
         @*<div class="columns">
                     <div class="column is-6">
@@ -316,8 +417,7 @@
                         </div>
                     </div>
                 </div>*@
-    </div>
-</div>
+
 
 @*<div id="ProjectModal" class="modal">
             <div class="modal-background"></div>
@@ -329,17 +429,15 @@
 <div id="ProjectModal" class="modal">
     <div class="modal-background" v-on:click="CloseModal"></div>
     <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Modal title</p>
-            <button class="delete" v-on:click="CloseModal"></button>
-        </header>
+        <div class="modal-card-head">
+            <p class="modal-card-title"></p>
+            <button class="delete is-pulled-right" v-on:click="CloseModal"></button>
+        </div>
         <section id="ProjectContent" class="modal-card-body"></section>
-        @*<footer class="modal-card-foot">
-                    <button class="button is-success">Save changes</button>
-                    <button class="button">Cancel</button>
-                </footer>*@
     </div>
 </div>
+    
+
 
 @*<script src="~/Scripts/Index.js"></script>*@
 

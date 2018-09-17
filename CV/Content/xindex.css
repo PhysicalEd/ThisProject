@@ -1,12 +1,12 @@
 ﻿
 
-#section0 {
-    background-image: url('img/me.jpg');
+#IntroSection {
+    /*background-image: url('img/me.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    /*filter: grayscale(100%);*/
-    /*filter: brightness(75%);*/
+    background-repeat: no-repeat;*/
+    /*filter: grayscale(100%);
+    filter: brightness(75%);*/
 }
 
 .call-to-action {

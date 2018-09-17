@@ -1,5 +1,7 @@
 ﻿$(document).ready(function () {
     var IndexModel = null;
+    var HasRenderedSkills = false;
+
 
     // Directives
     Vue.directive('backgroundimage',
@@ -12,34 +14,15 @@
             }
         });
 
-    // Timeline components
-    //Vue.component('timeline-item',
-    //    {
-    //        props: ['title', 'subtitle'],
-    //        template: `
-    //            <div class ="timeline-item is-primary">
-    //                <div class ="timeline-marker is-primary is-centered"></div>
-    //                <div class ="timeline-content">
-    //                    <h4 class ="title is-4" v-html="title"></h4>
-    //                    <h4 class ="subtitle is-6" v-html="subtitle"></h4>
-    //                </div>
-    //            </div>`
-    //    });
-
-    //Vue.component('timeline-content',
-    //    {
-    //        props: ['image', 'description'],
-    //        template: `
-    //            <div class="timeline-item is-primary">
-    //                <div class="timeline-marker is-image is-96x96">
-    //                    <div class="image is-96x96" v-backgroundimage="image"></div>
-    //                </div>
-
-    //                <div class="timeline-content is-128-high">
-    //                    <p class="auto-margin" v-html="description"></p>
-    //                </div>
-    //            </div>`
-    //    });
+    Vue.directive('backgroundimage-contain',
+        {
+            bind: function (el, value) {
+                $(el).css('background-image', `url('/content/img/${value.value}'`);
+                $(el).css('background-repeat', 'no-repeat');
+                $(el).css('background-size', 'contain');
+                $(el).css('background-position', 'center center');
+            }
+        });
 
     // Skill components
     Vue.component('skill-item',
@@ -49,7 +32,7 @@
                 <div class ="columns">
                     <div class ="column is-3" v-html="skill"></div>
                     <div class ="column is-9 is-div-centered">
-                        <div class ="myprogress has-text-centered" data-years="level"></div>
+                        <div class ="myprogress has-text-centered" v-html="level"></div>
                     </div>
                 </div>`
         });
@@ -70,101 +53,118 @@
     //            </div>`
     //    });
 
-    var app = new Vue({
+    let app = new Vue({
         el: '#vue-instance',
+        props: {
+                
+        },
         data: {
-            Reference: "",
-            IndexModel: IndexModel
-            //TimelineItems: ""
+            IndexModel: IndexModel,
+            IsJoking: true,
+            CurrentPersona: "software developer"
         },
         methods: {
             Test: Test,
             CRM: function (event) {
-                LoadContent("CRM");
+                LoadContent(event.currentTarget, "CRM");
             },
             NFTB: function (event) {
-                LoadContent("NFTB");
+                LoadContent(event.currentTarget, "NFTB");
             },
-            MT4: function(event) {
+            MT4: function (event) {
                 LoadContent(event.currentTarget, "MT4");
+            },
+            ThisProject: function (event) {
+                LoadContent(event.currentTarget, "ThisProject");
             },
             CloseModal: CloseModal,
             DownloadCV: function () {
                 window.open("/home/DownloadCV");
             },
-            ShowReference: function (reference) {
-                this.Reference = reference;
-                ShowReference(this.Reference);
-            },
-            DownloadReference: function () { DownloadReference(this.Reference) },
+
             MyLife: function (event) {
                 MyLife(event.currentTarget);
-                
+
 
                 //this.$mount('#vue-instance');
                 //console.log(app);
 
             },
+            ShowReferences: function (event) { ShowReferences(event.currentTarget) },
             RenderSkillsInYears: RenderSkillsInYears,
-            Back: function () { window.history.back(); }
+            Back: function () { window.history.back(); },
+            ChangePersona: function() {
+                var personas = ['father', 'husband', 'dancer', 'photography enthusiast'];
+                var randomNumber = Math.floor((Math.random() * (personas.length)));
+                this.CurrentPersona = personas[randomNumber];
+            },
+            ResetPersona: function () { this.CurrentPersona = "software developer" }
         }
     });
 
-    console.log(app);
+    $(document).on('scroll', function () {
+        if (HasRenderedSkills) return;
+        var windowHeight = $(window).height();
+        var current = $(document).scrollTop();
+        var skills = $('#SkillsSection').offset().top;
 
-
-    //AnimateSkills();
+        if ((skills - current) <= windowHeight / 4) {
+            AnimateSkills();
+            HasRenderedSkills = true;
+       }
+    });
 
 });
 
+function OpenModal(data, cardTitle) {
+    $('.modal-card-title').html(cardTitle);
+    $('#ProjectContent').html(data);
+    $('#ProjectModal').addClass('is-active');
+    // Disable scrolling in background
+    $('html').addClass('modal-open');
+    $('body').addClass('modal-open');
+}
+
 function MyLife(el) {
     $(el).addClass('is-loading');
-    //location.href = "/home/mylife";
     $.get("/home/mylife", function (data) {
-        $('.modal-card-title').html("Welcome!");
-        $('#ProjectContent').html(data);
-        $('#ProjectModal').addClass('is-active');
+        OpenModal(data, "Like sands through the hourglass...");
     }).done(function () { $(el).removeClass('is-loading'); });
 }
 
 
 function Test() {
     $.get("/home/landing", function (data) {
-        $('.modal-card-title').html("Welcome!");
-        $('#ProjectContent').html(data);
-        $('#ProjectModal').addClass('is-active');
+        OpenModal(data, "Welcome");
     });
 }
 
 function LoadContent(el, projectName) {
+    $('#ProjectContent').html("");
     $(el).addClass('is-loading');
-
-    //$.get("/project/" + projectName, function (data) {
-
-    //    $('.modal-card-title').html(projectName);
-    //    $('#ProjectContent').html(data);
-    //    $('#ProjectModal').addClass('is-active');
-    //});
+    $.get("/project/" + projectName, function (data) {
+        OpenModal(data);
+    }).done(function() {
+        $(el).removeClass('is-loading');
+    });
 
 }
 
-//function ResetGrayscale() {
-//    $('.tile.is-child').addClass('grayscale');
-//}
+function ShowReferences(el) {
+    $(el).addClass('is-loading');
+    $.get("/home/references", function (data) {
+        OpenModal(data, "References");
+    }).done(function () {
+        $(el).removeClass('is-loading');
+    });
+}
 
 function CloseModal() {
     $('.modal').removeClass('is-active');
-}
+    // Re-enable scrolling in background
+    $('html').removeClass('modal-open');
+    $('body').removeClass('modal-open');
 
-function ShowReference(reference) {
-    var content = $('#' + reference).html();
-    $('#ReferenceContent').html(content);
-    $('.modal-card-title').html("Reference by " + reference);
-    $('#ReferenceModal').addClass('is-active');
-}
-
-function DownloadReference(reference) {
-    window.open("/home/DownloadReference?referenceName=" + reference);
 }
 
 function AnimateSkills() {
@@ -189,6 +189,7 @@ function AnimateSkills() {
 }
 
 function RenderSkillsInYears() {
+    this.IsJoking = false;
     $('.myprogress').removeClass('shake');
     // Years working
     var delay = 100;
@@ -196,7 +197,7 @@ function RenderSkillsInYears() {
         setTimeout(function () {
             var progressVal = 0;
             var numberOfYears = $(el).attr('data-years');
-            var totalYears = 7;
+            var totalYears = 6;
             var timer = setInterval(function () {
                 progressVal += 1;
                 var progressValDesc = progressVal + '%';

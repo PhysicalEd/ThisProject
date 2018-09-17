@@ -3,70 +3,99 @@
 
 
 
-<div class="hero is-medium is-primary">
+<div class="hero has-bottom-border">
     <div class="hero-body">
-        MT4 - 2018
-        <a class="button">
-            <span class="icon"><i class="fab fa-github"></i></span>
-            <span>View on GitHub</span>
-        </a>
+        @*<div class="level">
+            <div class="image is-128x128 level-left">
+                <img class="" src="~/Content/img/soonsoon.png"/>
+            </div>
+
+        </div>*@
+        <div class="section-margin">
+            <div class="columns">
+                <div class="column">
+                    <div class="image is-128x128 auto-margin">
+                        <img class="" src="~/Content/img/soonsoon.png"/>
+                    </div>
+                    <div class="has-text-centered">
+                        <span class="tag">SQL</span>
+                        <span class="tag">.NET Web API</span>
+                        <span class="tag">MQL (MT4 language)</span>
+                    </div>
+                </div>
+                <div class="column auto-margin">
+                    <div class="section has-text-justified content">
+                        <p> Everyone wants to be rich, and I am no exception. </p>
+                        <p> MT4 is a programmable forex trading platform which allows you to create tools that automate and manage your trading activities. </p>
+                        <p> After some interesting discussions with a friend of mine who had spent time experimenting with various trading patterns, I became inspired to build a trading robot to automate his trades. </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+        @*<div class="columns">
+            <div class="column">
+                <div class="image is-fullheight">
+                    <img class="" src="~/Content/img/soonsoon.png"/>
+                </div>
+            </div>
+            <div class="column auto-margin">
+                <h3 class="title is-3">MT4 Trading Robot 2018</h3>
+                <p> Everyone wants to be rich. I am no exception. My good friend and I decided to collaborate. He has been making playing around with his own patterns and thought it would be great to automate his trades</p>
+                <p> MT4 is a programmable forex trading platform. It allows you to create tools </p>
+            </div>
+        </div>*@
+
+        @*<div class="has-text-centered">
+            MT4 - 2018
+        </div>*@
     </div>
 </div>
 
 <div class="section-margin">
-    
-    <div class="tile is-ancestor">
-        <div class="tile is-6 is-parent">
-            <div class="tile is-child">
-                <h3 class="title is-3">Overview</h3>
-                <p> Everyone wants to be rich. I am no exception. My good friend and I decided to collaborate. He has been making playing around with his own patterns and thought it would be great to automate his trades</p>
-                <p> MT4 is a programmable forex trading platform. It allows you to create tools </p>
-            </div>
-
-        </div>
-        <div class="tile  is-vertical is-parent">
-            <div class="tile is-child box">
-                <h3 class="title is-3">Problem</h3>
-                <p>
-                    From my limited knowledge, Forex trading comes down to recognising patterns and making trades at the correct time before patters chage. This is both time consuming and could potentially have lost opportunities.
-                </p>
-            </div>
-            <i class="fas fa-arrow-down has-text-centered"></i>
-            <div class="tile is-child box">
-                <h3 class="title is-3">Solution</h3>
-                <p> Build an automated trading robot using their platform. In addition to the trading robot, we needed to be able to backtest the algorithm with real historical data.</p>
-            </div>
-            <i class="fas fa-arrow-down has-text-centered"></i>
-        </div>
+    <div class="box content">
+        <p class="title has-bottom-border">Problem</p>
+        <p>
+            Successful Forex trading comes down to recognising patterns and making trades at the correct time before they change. This is not only time consuming, but could potentially result in lost opportunities.
+        </p>
     </div>
+
+    <div class="box is-shadowless is-transparent has-text-centered">
+        <i class="fas fa-arrow-alt-circle-down has-mt4-color is-size-3"></i>
+    </div>
+
+    <div class="box content">
+        <p class="title has-bottom-border">Solution</p>
+        <p> Build an automated trading robot using the MT4 platform.  </p>
+        <p> In addition to the trading robot, we needed to be able to backtest the algorithm with real historical data. This is part of the project is currently in progress.  </p>
+    </div>
+
+    <div class="box is-shadowless is-transparent has-text-centered">
+        <i class="fas fa-arrow-alt-circle-down has-mt4-color is-size-3"></i>
+    </div>
+
     <div class="box">
         <h3 class="title is-3 has-bottom-border">What I learned</h3>
         <div class="content">
-            <h6 class="title is-6">I am thankful for VisualStudio and ReSharper ?????</h6>
+            <h6 class="title is-6">Developing date and time concepts without extensions</h6>
             <p>
-                Having the right tools reduces the time it takes to develop. MT4 had their own editor which is pretty basic and it made me appreciate features as simple as "Go to Definition" or having squiggly lines to tell you that you missed a semicolon. 
-                I have always thought developing in the most basic tools is the coolest thing (Notepad++) but this has cemented it in my head that people should utilise the right tools for the job to make their lives easier.
+                In theory, every system should be able to save and retrieve DateTime values based on a user's local timezone, however MT4 has no concept of UTC time format, and this posed as a challenge. 
             </p>
-        </div>
-        
-        <div class="content">
-            <h6 class="title is-6">Date and time concepts are a pain to deal with</h6>
-            <p>
-                I have known this since I've worked at Blackball Software and the issue comes down to localisation. A system should be able to save and retrive datetime values based on a current user's timezone.
-                Even with the right DateTime extensions at my current job that have been developed overtime still trips me up but developing it in a system where there is no concept of UTC time format deemed a bit difficult.
-                I wanted the automation to account for Daylight Time Savings so there is no need for human intervention at all. I have somewhat come to a solution with the limited functions that the platform provides.
-            </p>
-        </div>
-        
-        <div class="content">
-            <h6 class="title is-6">It's sometimes better to reinvent the wheel</h6>
-            <p>
-                MT4 provided a backtesting solution which was great... which I initially thought until the system started falling over with massive amounts of data. 
-                The backtest process was slow, the code had to be re-engineered specifically for backtesting, the data that was used was sometimes incomplete - basically it was a mess. 
-                So I decided to start backtesting project in C#. That way, I was in a familiar environment and my speed increased significantly
+            <p>What MT4 does have, is an existing GMT timezone. Because I wanted the automation to account for Daylight Time Savings, I was able to use this timezone to offset to my timezone. However, this does not solve the issue of daylight saving time, I am yet to make a function that accounts for this to avoid any manual intervention down the track.
             </p>
         </div>
 
+        <div class="content">
+            <h6 class="title is-6">It sometimes pays to reinvent the wheel</h6>
+            <p>
+                MT4 provided a backtesting solution which I initially thought was great... until the system started falling over with massive amounts of data. 
+            </p>
+            <p>
+                The backtest process was slow and the code had to be re-engineered as the data was sometimes incomplete. As a result, I decided to start a backtesting project in C# which meant I was in a familiar environment, and the development speed increased significantly.
+            </p>
+        </div>
     </div>
 </div>
 

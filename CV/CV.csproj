@@ -194,8 +194,17 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\fontawesome.min.css" />
+    <Content Include="Content\img\dancer.jpg" />
+    <Content Include="Content\img\dancinguni1.jpg" />
+    <Content Include="Content\img\EAO.png" />
     <Content Include="Content\img\europe1.jpg" />
+    <Content Include="Content\img\family.jpg" />
+    <Content Include="Content\img\father.jpg" />
+    <Content Include="Content\img\traveller.jpg" />
+    <Content Include="Content\img\wannabephotographer.jpg" />
     <Content Include="Content\img\wedding1.jpg" />
+    <Content Include="Content\img\wife.jpg" />
     <Content Include="Content\modal-fx.min.css" />
     <Content Include="Content\bulma-timeline.min.css" />
     <Content Include="Content\bulma.css" />
@@ -226,8 +235,10 @@
     <Content Include="Content\img\thisProject.png" />
     <Content Include="Content\img\wedding.jpg" />
     <Content Include="Content\xProjects.css" />
+    <Content Include="Scripts\references..js" />
     <Content Include="Scripts\scrolloverflow.min.js" />
     <Content Include="Scripts\vue.js" />
+    <Content Include="Scripts\vue.min.js" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
@@ -290,6 +301,8 @@
     <Content Include="Views\Home\EmploymentHistory.cshtml" />
     <Content Include="Views\Home\Testimonial.cshtml" />
     <Content Include="Views\Home\Landing.cshtml" />
+    <Content Include="Views\Home\References.cshtml" />
+    <None Include="Properties\PublishProfiles\edwardarlan - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

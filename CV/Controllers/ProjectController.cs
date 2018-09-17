@@ -17,7 +17,7 @@ namespace CV.Controllers
 
         public ActionResult CRM()
         {
-            return View();
+            //return View();
             return PartialView("CRM");
         }
 
@@ -29,14 +29,14 @@ namespace CV.Controllers
 
         public ActionResult NFTB()
         {
-            return View();
+            //return View();
 
             return PartialView("NFTB");
         }
 
         public ActionResult ThisProject()
         {
-            return View();
+            //return View();
             return PartialView("ThisProject");
         }
     }

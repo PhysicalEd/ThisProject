@@ -70,5 +70,10 @@ namespace CV.Controllers
             //if (isPartial.GetValueOrDefault(false)) return PartialView();
             return PartialView();
         }
+
+        public ActionResult References()
+        {
+            return PartialView();
+        }
     }
 }

@@ -1,0 +1,46 @@
+﻿<script src="/Scripts/references..js"></script>
+<div id="References" class="">
+    <div class="tabs is-centered is-boxed">
+        <ul>
+            <li id="BlackballTab" class="is-active"><a v-on:click="ShowReference('Blackball')">Blackball Software</a></li>
+            <li id="ITCTab"><a v-on:click="ShowReference('ITC')">ITC / LMS</a></li>
+        </ul>
+        
+
+
+    </div>
+    
+    <div id="Blackball" class="content" v-show="Reference === 'Blackball'">
+        <p class="is-italic has-text-justified">
+            “In all aspects of his job, Ed has proven himself to be an exceptional staff member. He has an aptitude and instinct for software development which allows him to both follow instructions and fill in the blanks where necessary. In many cases, I have been delighted when Ed has come forward to query, and improve upon, some of the design decisions proposed in his tickets. Despite being a junior developer, I quickly came to trust him with very little oversight.
+        </p>
+        <p class="is-italic has-text-justified">
+            Further to his development skills, Ed excels in the peripheral skills which are just as essential in a small development team. His client interactions are exceptional and he is a fantastic team member - ready to knuckle down when the going gets tough, then celebrate with a team lunch and a laugh afterwards."
+        </p>
+        <br/>
+        <br />
+        <div class="section">
+            <p class="is-pulled-right has-text-weight-bold">
+                Ben Liebert, Founder
+                Blackball Software
+            </p>
+        </div>
+    </div>
+    
+    <div id="ITC" class="content" v-show="Reference === 'ITC'">
+        <p class="is-italic has-text-justified">
+            “In 22 years of business I have not experienced another employee who consistently provided such a high level of value over an equally broad range. As a colleague and workmate Edward’s character inspires loyalty, respect and friendship in those around him. His technical ability combined with an unfailingly moderate and positive character have made him a natural leader in the organisation..
+        </p>
+        <p class="is-italic has-text-justified">
+            Very seldom a company is presented with the opportunity to engage a truly exceptional team member. If your organisation is presented with this reference you can be assured this is one of those rare moments."
+        </p>
+        <br/>
+        <br />
+        <div class="section">
+            <p class="is-pulled-right has-text-weight-bold">
+                Shane Gregory, Director
+                ITC, LMS
+            </p>
+        </div>
+    </div>
+</div>
