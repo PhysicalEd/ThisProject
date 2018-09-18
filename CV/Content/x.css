@@ -31,7 +31,11 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
+    /*font-family: 'Nunito', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+    /*font-family: 'QuickSand', sans-serif;*/
+
+
     /*font-family: 'Nanum Gothic', sans-serif;*/
     /*letter-spacing: 0.5em;*/
 }
@@ -379,3 +383,27 @@ html.modal-open, body.modal-open {
 .one-third-vh {
     height: 32vh;
 }
+
+@media screen and (max-width: 768px) {
+    .html, body {
+        overflow-y: hidden;
+    }
+}
+
+.has-no-bottom-margin {
+    margin-bottom: 0 !important;
+}
+
+#KiaOra {
+    font-size: 5em;
+}
+
+.is-1 {
+    font-size: 3rem;
+}
+
+
+
+/*.hero-body {
+    padding: 1.5rem 1.5rem;
+}*/

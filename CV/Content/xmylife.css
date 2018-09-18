@@ -65,7 +65,8 @@
     flex-direction: column;
     align-items: flex-end;
     flex-basis: 100%;
-    margin-left: 4em;
+    /*margin-left: 4em;*/
+    margin-left: 0;
 }
 
 .timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-content.is-128-high {
@@ -77,21 +78,25 @@
     flex-direction: column;
     align-items: flex-end;
     flex-basis: 100%;
-    margin-right: 4em;
+    /*margin-right: 4em;*/
+    margin-right: 0;
     margin-left: 0;
 }
 
 .timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-content {
     padding: 1em;
-    margin-right: 4em;
+    /*margin-right: 4em;*/
+    margin-right: 0;
+    margin-left: 0;
+
 }
 
 .timeline.is-centered .timeline-item .timeline-content {
     padding: 1em;
-    margin-left: 4em;
+    /*margin-left: 4em;*/
+    margin-right: 0;
+
 }
-
-
 
 /*.timeline .timeline-item .timeline-content .is-128x128 {
     background-color: black;

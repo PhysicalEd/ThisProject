@@ -5,7 +5,7 @@
             template: `
                 <div class ="timeline-item is-gray">
                     <div class ="timeline-marker is-gray"></div>
-                    <div class ="timeline-content has-background-light">
+                    <div class ="timeline-content has-background-grey-lighter">
                         <h4 class ="title is-4" v-html="title"></h4>
                         <h4 class ="subtitle is-6" v-html="subtitle"></h4>
                     </div>

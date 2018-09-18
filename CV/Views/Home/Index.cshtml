@@ -8,12 +8,12 @@
 <div id="IndexPage">
 
 @*Intro*@
-<div class="hero is-fullheight has-background-grey-lighter" id="IntroSection" v-backgroundimage-contain="'me.jpg'">
-    <div class="is-div-centered">
-        <h1 class="title is-1">Kia Ora! I'm Ed.</h1>
+<div class="hero is-fullheight has-background-grey-lighter" id="IntroSection" v-backgroundimage="'me.jpg'">
+    <div class="is-div-centered has-text-centered">
+        <h1 id="KiaOra" class="title has-no-bottom-margin">Kia Ora! I'm Ed.</h1>
 
         <div class="has-text-centered" >
-            <a class="subtitle button is-large button-animation" v-on:click="MyLife">
+            <a class="subtitle button button-animation has-text-weight-bold" v-on:click="MyLife">
                 <span>Not just a <span v-html="CurrentPersona" ></span></span>
                 <span class="icon is-small"><i class="fas fa-angle-double-right"></i></span>
             </a>
@@ -55,7 +55,7 @@
     <div>
         @*<div class="container auto-margin">*@
         <div>
-            <h1 class="title is-1 has-bottom-border">About</h1>
+            <h1 class="title is-1 is-1-mobile has-bottom-border">About</h1>
             <div class="sub-section-margin">
                 <div class="content">
 
@@ -78,7 +78,7 @@
             </div>
 
             <div class="has-text-centered">
-                <a class="subtitle button has-background-grey-lighter is-large button-animation" v-on:click="DownloadCV">
+                <a class="subtitle button has-background-grey-lighter button-animation" v-on:click="DownloadCV">
                     <span>Curriculum Vitae</span>
                     <span class="icon is-small"> <i class="fas fa-download"></i></span>
                 </a>
@@ -95,7 +95,7 @@
 @*Skills*@
 <div id="SkillsSection" class="hero has-background-grey-lighter">
     <div id="Skills" class="section-margin">
-        <h1 class="title is-1 has-bottom-border">Skills</h1>
+        <h1 class="title is-1 is-1-mobile has-bottom-border">Skills</h1>
         @*<div class="content">
                     <div class="select is-small">
                         <select>
@@ -223,7 +223,7 @@
                     Although… even the number of years don't count for much. What really matters is how much an individual has learned in those years. I believe this can only be seen through one’s work and hard earned references.
                 </p>
                 <div class="has-text-centered">
-                    <a class="subtitle button is-large button-animation" v-on:click="ShowReferences">
+                    <a class="subtitle button button-animation" v-on:click="ShowReferences">
                         <span>See what people say about me</span>
                         <span class="icon is-small"> <i class="fas fa-angle-double-right"></i></span>
                     </a>
@@ -240,7 +240,7 @@
 @*Projects*@
 <div id="ProjectsSection" class="is-fullheight has-background-white">
     <div class="section-margin">
-        <h1 class="title is-1 has-bottom-border">Latest projects</h1>
+        <h1 class="title is-1 is-1-mobile has-bottom-border">Latest projects</h1>
         <div class="tile is-ancestor">
             <div class="tile is-parent" v-on:click.prevent="MT4">
                 <div class="tile is-child box clickable grayscale">
@@ -301,9 +301,9 @@
 @*Contact*@
 <div id="ContactSection" class="hero is-fullheight has-background-grey-lighter">
         <div class="section-margin">
-            <h1 class="title is-1 has-bottom-border">Contact</h1>
+            <h1 class="title is-1 is-1-mobile has-bottom-border">Contact</h1>
         </div>
-        <div class='auto-margin'>
+        <div class='auto-margin has-text-centered'>
             <a class="button" href="mailto:ong.edward23@gmail.com">
                 <span class="icon"><i class="far fa-envelope"></i></span>
                 <span>ong.edward23@gmail.com</span>
