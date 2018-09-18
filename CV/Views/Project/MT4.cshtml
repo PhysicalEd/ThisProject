@@ -1,20 +1,21 @@
-﻿
+﻿<script src="/Scripts/project.js"></script>
 
 
+<div id="ProjectInstance">
 
 
-<div class="hero has-bottom-border">
-    <div class="hero-body">
-        @*<div class="level">
-            <div class="image is-128x128 level-left">
-                <img class="" src="~/Content/img/soonsoon.png"/>
-            </div>
+    <div class="hero has-bottom-border">
+        <div class="hero-body">
+            @*<div class="level">
+                    <div class="image is-128x128 level-left">
+                        <img class="" src="~/Content/img/soonsoon.png"/>
+                    </div>
 
-        </div>*@
+                </div>*@
             <div class="columns">
                 <div class="column auto-margin">
                     <div class="image is-256x256 auto-margin is-vertical-center">
-                        <img class="" src="~/Content/img/soonsoon.png"/>
+                        <img class="" src="~/Content/img/soonsoon.png" />
                     </div>
                     <div class="has-text-centered">
                         <span class="tag">SQL</span>
@@ -32,173 +33,182 @@
 
                 </div>
             </div>
-        
 
-        @*<div class="columns">
-            <div class="column">
-                <div class="image is-fullheight">
-                    <img class="" src="~/Content/img/soonsoon.png"/>
+
+            @*<div class="columns">
+                    <div class="column">
+                        <div class="image is-fullheight">
+                            <img class="" src="~/Content/img/soonsoon.png"/>
+                        </div>
+                    </div>
+                    <div class="column auto-margin">
+                        <h3 class="title is-3">MT4 Trading Robot 2018</h3>
+                        <p> Everyone wants to be rich. I am no exception. My good friend and I decided to collaborate. He has been making playing around with his own patterns and thought it would be great to automate his trades</p>
+                        <p> MT4 is a programmable forex trading platform. It allows you to create tools </p>
+                    </div>
+                </div>*@
+
+            @*<div class="has-text-centered">
+                    MT4 - 2018
+                </div>*@
+        </div>
+    </div>
+
+    <div class="content sub-section-margin">
+        <div class="box">
+            <p class="title has-bottom-border">Problem</p>
+            <p>
+                Successful Forex trading comes down to recognising patterns and making trades at the correct time before they change. This is not only time consuming, but could potentially result in lost opportunities.
+            </p>
+        </div>
+
+        <div class="box is-shadowless is-transparent has-text-centered">
+            <i class="fas fa-arrow-alt-circle-down has-mt4-color is-size-3"></i>
+        </div>
+
+        <div class="box">
+            <p class="title has-bottom-border">Solution</p>
+            <p> Build an automated trading robot using the MT4 platform.  </p>
+            <p> In addition to the trading robot, we needed to be able to backtest the algorithm with real historical data. This is part of the project is currently in progress.  </p>
+        </div>
+
+        <div class="box is-shadowless is-transparent has-text-centered">
+            <i class="fas fa-arrow-alt-circle-down has-mt4-color is-size-3"></i>
+        </div>
+
+        <div class="box">
+            <h3 class="title is-3 has-bottom-border">What I learned</h3>
+            <div class="content">
+                <h6 class="title is-6">Developing date and time concepts without extensions</h6>
+                <p>
+                    In theory, every system should be able to save and retrieve DateTime values based on a user's local timezone, however MT4 has no concept of UTC time format, and this posed as a challenge.
+                </p>
+                <p>
+                    What MT4 does have, is an existing GMT timezone. Because I wanted the automation to account for Daylight Time Savings, I was able to use this timezone to offset to my timezone. However, this does not solve the issue of daylight saving time, I am yet to make a function that accounts for this to avoid any manual intervention down the track.
+                </p>
+            </div>
+
+            <div class="content">
+                <h6 class="title is-6">It sometimes pays to reinvent the wheel</h6>
+                <p>
+                    MT4 provided a backtesting solution which I initially thought was great... until the system started falling over with massive amounts of data.
+                </p>
+                <p>
+                    The backtest process was slow and the code had to be re-engineered as the data was sometimes incomplete. As a result, I decided to start a backtesting project in C# which meant I was in a familiar environment, and the development speed increased significantly.
+                </p>
+            </div>
+
+        </div>
+        <div class="has-text-centered">
+            <a class="button" v-on:click="LoadGitHub('Forex')">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>View on GitHub</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+    @*<div>
+            <div class="hero has-mt4-color is-small is-bold">
+                <div class="hero-body section-margin">
+                    <h4 class="">CRM</h4>
                 </div>
             </div>
-            <div class="column auto-margin">
-                <h3 class="title is-3">MT4 Trading Robot 2018</h3>
-                <p> Everyone wants to be rich. I am no exception. My good friend and I decided to collaborate. He has been making playing around with his own patterns and thought it would be great to automate his trades</p>
-                <p> MT4 is a programmable forex trading platform. It allows you to create tools </p>
+
+            <div class="section-margin">
+                <div class="columns sub-section-margin">
+                    <div class="column is-2">
+                        <h6 class="subtitle is-6 is-italic">1 - the problem</h6>
+                    </div>
+                    <div class="column is-10">
+                        <p>
+                            The company I worked for had an internal CRM system written in Delphi as a desktpp application and was backed by an MSAccess database. This eventually became problematic because of compatibility issues with running the application on different Windows desktop platforms.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="columns sub-section-margin">
+                    <div class="column is-2">
+                        <h6 class="subtitle is-6 is-italic">2 - the solution</h6>
+                    </div>
+                    <div class="column is-10">
+                        <p>
+                            Rewrite the front end application to a web application. We converted the database to an MSSQL database and went from there.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="columns sub-section-margin">
+                    <div class="column is-2">
+                        <h6 class="subtitle is-6 is-italic">Screenshots</h6>
+
+                    </div>
+                    <div class="column is-10">
+                        <div class="columns">
+                            <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                            <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                        </div>
+                        <div class="columns">
+                            <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                            <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="hero is-info is-small is-bold">
+                <div class="hero-body section-margin">
+                    <h4 class="">CRM</h4>
+                </div>
+            </div>
+
+            <div class="section-margin">
+                <div class="columns sub-section-margin">
+                    <div class="column is-2">
+                        <h6 class="subtitle is-6 is-italic">1 - the problem</h6>
+                    </div>
+                    <div class="column is-10">
+                        <p>
+                            The company I worked for had an internal CRM system written in Delphi as a desktpp application and was backed by an MSAccess database. This eventually became problematic because of compatibility issues with running the application on different Windows desktop platforms.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="columns sub-section-margin">
+                    <div class="column is-2">
+                        <h6 class="subtitle is-6 is-italic">2 - the solution</h6>
+                    </div>
+                    <div class="column is-10">
+                        <p>
+                            Rewrite the front end application to a web application. We converted the database to an MSSQL database and went from there.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="columns sub-section-margin">
+                    <div class="column is-2">
+                        <h6 class="subtitle is-6 is-italic">Screenshots</h6>
+
+                    </div>
+                    <div class="column is-10">
+                        <div class="columns">
+                            <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                            <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                        </div>
+                        <div class="columns">
+                            <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                            <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>*@
-
-        @*<div class="has-text-centered">
-            MT4 - 2018
-        </div>*@
-    </div>
-</div>
-
-<div class="content sub-section-margin">
-    <div class="box">
-        <p class="title has-bottom-border">Problem</p>
-        <p>
-            Successful Forex trading comes down to recognising patterns and making trades at the correct time before they change. This is not only time consuming, but could potentially result in lost opportunities.
-        </p>
-    </div>
-
-    <div class="box is-shadowless is-transparent has-text-centered">
-        <i class="fas fa-arrow-alt-circle-down has-mt4-color is-size-3"></i>
-    </div>
-
-    <div class="box">
-        <p class="title has-bottom-border">Solution</p>
-        <p> Build an automated trading robot using the MT4 platform.  </p>
-        <p> In addition to the trading robot, we needed to be able to backtest the algorithm with real historical data. This is part of the project is currently in progress.  </p>
-    </div>
-
-    <div class="box is-shadowless is-transparent has-text-centered">
-        <i class="fas fa-arrow-alt-circle-down has-mt4-color is-size-3"></i>
-    </div>
-
-    <div class="box">
-        <h3 class="title is-3 has-bottom-border">What I learned</h3>
-        <div class="content">
-            <h6 class="title is-6">Developing date and time concepts without extensions</h6>
-            <p>
-                In theory, every system should be able to save and retrieve DateTime values based on a user's local timezone, however MT4 has no concept of UTC time format, and this posed as a challenge. 
-            </p>
-            <p>What MT4 does have, is an existing GMT timezone. Because I wanted the automation to account for Daylight Time Savings, I was able to use this timezone to offset to my timezone. However, this does not solve the issue of daylight saving time, I am yet to make a function that accounts for this to avoid any manual intervention down the track.
-            </p>
-        </div>
-
-        <div class="content">
-            <h6 class="title is-6">It sometimes pays to reinvent the wheel</h6>
-            <p>
-                MT4 provided a backtesting solution which I initially thought was great... until the system started falling over with massive amounts of data. 
-            </p>
-            <p>
-                The backtest process was slow and the code had to be re-engineered as the data was sometimes incomplete. As a result, I decided to start a backtesting project in C# which meant I was in a familiar environment, and the development speed increased significantly.
-            </p>
-        </div>
-    </div>
-</div>
-
-@*<div>
-    <div class="hero has-mt4-color is-small is-bold">
-        <div class="hero-body section-margin">
-            <h4 class="">CRM</h4>
-        </div>
-    </div>
-
-    <div class="section-margin">
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">1 - the problem</h6>
-            </div>
-            <div class="column is-10">
-                <p>
-                    The company I worked for had an internal CRM system written in Delphi as a desktpp application and was backed by an MSAccess database. This eventually became problematic because of compatibility issues with running the application on different Windows desktop platforms.
-                </p>
-            </div>
-        </div>
-
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">2 - the solution</h6>
-            </div>
-            <div class="column is-10">
-                <p>
-                    Rewrite the front end application to a web application. We converted the database to an MSSQL database and went from there.
-                </p>
-            </div>
-        </div>
-
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">Screenshots</h6>
-
-            </div>
-            <div class="column is-10">
-                <div class="columns">
-                    <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
-                    <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
-                </div>
-                <div class="columns">
-                    <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
-                    <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div>
-    <div class="hero is-info is-small is-bold">
-        <div class="hero-body section-margin">
-            <h4 class="">CRM</h4>
-        </div>
-    </div>
-
-    <div class="section-margin">
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">1 - the problem</h6>
-            </div>
-            <div class="column is-10">
-                <p>
-                    The company I worked for had an internal CRM system written in Delphi as a desktpp application and was backed by an MSAccess database. This eventually became problematic because of compatibility issues with running the application on different Windows desktop platforms.
-                </p>
-            </div>
-        </div>
-
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">2 - the solution</h6>
-            </div>
-            <div class="column is-10">
-                <p>
-                    Rewrite the front end application to a web application. We converted the database to an MSSQL database and went from there.
-                </p>
-            </div>
-        </div>
-
-        <div class="columns sub-section-margin">
-            <div class="column is-2">
-                <h6 class="subtitle is-6 is-italic">Screenshots</h6>
-
-            </div>
-            <div class="column is-10">
-                <div class="columns">
-                    <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
-                    <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
-                </div>
-                <div class="columns">
-                    <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
-                    <div class="screenshot-image column" v-backgroundimage="'crm2.png'"></div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</div>*@
 
 
 

@@ -1,87 +1,90 @@
-﻿<div class="hero has-bottom-border">
-    @*<div class="image is-128x128 is-div-centered level-item">
+﻿<script src="/Scripts/project.js"></script>
+<div id="ProjectInstance">
+    <div class="hero has-bottom-border">
+        @*<div class="image is-128x128 is-div-centered level-item">
             <img class="" src="~/Content/img/NFTB.png" />
         </div>
         <div class="has-text-centered">
             NFTB - 2018
         </div>*@
-    <div class="hero-body">
-        <div class="columns">
-            <div class="column auto-margin">
-                <div class="image is-256x256 auto-margin  is-vertical-center">
-                    <img class="" src="~/Content/img/thisProject.png" />
+        <div class="hero-body">
+            <div class="columns">
+                <div class="column auto-margin">
+                    <div class="image is-256x256 auto-margin  is-vertical-center">
+                        <img class="" src="~/Content/img/thisProject.png" />
+                    </div>
+                    <div class="has-text-centered">
+                        <span class="tag">.NET MVC</span>
+                        <span class="tag">Bulma CSS</span>
+                        <span class="tag">VueJS</span>
+                    </div>
+
                 </div>
-                <div class="has-text-centered">
-                    <span class="tag">.NET MVC</span>
-                    <span class="tag">Bulma CSS</span>
-                    <span class="tag">VueJS</span>
+                <div class="column auto-margin">
+                    <div class="section has-text-justified content">
+                        <p> It was time to be part of the cool kids and make myself a personal website. this.Project (being this project that you're looking at right now) was created so I can stand out more to potential employers like yourself </p>
+                    </div>
+
                 </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content sub-section-margin">
+        <div class="box">
+            <h3 class="title is-3 has-bottom-border">Problem</h3>
+            <p>
+                Before I found my current job, I had difficulty finding a job for several reasons (I think these were the reasons):
+            </p>
+            <ul>
+                <li>I did not have any commercial experience.</li>
+                <li>I was not considred as a graduate so nobody would take me as a graduate</li>
+                <li>I'm asian (I DID NOT JUST SAY THAT!)</li>
+            </ul>
+        </div>
+
+        <div class="box is-shadowless is-transparent has-text-centered">
+            <i class="fas fa-arrow-alt-circle-down has-thisproject-color is-size-3"></i>
+        </div>
+
+        <div class="box">
+            <h3 class="title is-3 has-bottom-border">Solution</h3>
+            <p> I need to stand out enough to get YOUR attention. This site was a good way for me to show who I am (because that is more important than skills) without having a 3 page long CV.  </p>
+            <p> This site is also my sandpit to be able to play around with technologies that I want to play with. I can use this site as a template for future projects that require similar technologies.  </p>
+
+        </div>
+
+        <div class="box is-shadowless is-transparent has-text-centered">
+            <i class="fas fa-arrow-alt-circle-down has-thisproject-color is-size-3"></i>
+        </div>
+
+        <div class="box">
+            <h3 class="title is-3 has-bottom-border">What I learned</h3>
+            <div class="content">
+                <h6 class="title is-6">Understanding what's under the hood is a good way to learn... at a certain point</h6>
+                <p>
+                    One of my intentions for this projects is to avoid using well known CSS and JS libraries. It sounds crazy but I really wanted to get up close with these technologies in their purest form.
+                </p>
+                <p>
+                    Unfortunately, this took WAY too long and I wanted to finish up the project so I could start applying for jobs. This time constraint has been unfortunate because I had to clunk in ***VERY UGLY*** code.
+                    I am a big fan of 'do it once do it right' but this has not been the case for this project. As mentioned, this is my sandbox so I will be constantly updating this so that codebase is exactly how I need/want it to be
+                </p>
+            </div>
+
+            <div class="content">
+                <h6 class="title is-6"></h6>
 
             </div>
-            <div class="column auto-margin">
-                <div class="section has-text-justified content">
-                    <p> It was time to be part of the cool kids and make myself a personal website. this.Project (being this project that you're looking at right now) was created so I can stand out more to potential employers like yourself </p>
-                </div>
 
-            </div>
         </div>
-    </div>
 
+        <div class="has-text-centered">
+            <a class="button" v-on:click="LoadGitHub('ThisProject')">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>View on GitHub</span>
+            </a>
+        </div>
+    </div> 
 </div>
 
-<div class="content sub-section-margin">
-    <div class="box">
-        <h3 class="title is-3 has-bottom-border">Problem</h3>
-        <p>
-            Before I found my current job, I had difficulty finding a job for several reasons (I think these were the reasons):
-        </p>
-        <ul>
-            <li>I did not have any commercial experience.</li>
-            <li>I was not considred as a graduate so nobody would take me as a graduate</li>
-            <li>I'm asian (I DID NOT JUST SAY THAT!)</li>
-        </ul>
-    </div>
-
-    <div class="box is-shadowless is-transparent has-text-centered">
-        <i class="fas fa-arrow-alt-circle-down has-thisproject-color is-size-3"></i>
-    </div>
-
-    <div class="box">
-        <h3 class="title is-3 has-bottom-border">Solution</h3>
-        <p> I need to stand out enough to get YOUR attention. This site was a good way for me to show who I am (because that is more important than skills) without having a 3 page long CV.  </p>
-        <p> This site is also my sandpit to be able to play around with technologies that I want to play with. I can use this site as a template for future projects that require similar technologies.  </p>
-
-    </div>
-
-    <div class="box is-shadowless is-transparent has-text-centered">
-        <i class="fas fa-arrow-alt-circle-down has-thisproject-color is-size-3"></i>
-    </div>
-
-    <div class="box">
-        <h3 class="title is-3 has-bottom-border">What I learned</h3>
-        <div class="content">
-            <h6 class="title is-6">Understanding what's under the hood is a good way to learn... at a certain point</h6>
-            <p>
-                One of my intentions for this projects is to avoid using well known CSS and JS libraries. It sounds crazy but I really wanted to get up close with these technologies in their purest form.
-            </p>
-            <p>
-                Unfortunately, this took WAY too long and I wanted to finish up the project so I could start applying for jobs. This time constraint has been unfortunate because I had to clunk in ***VERY UGLY*** code.
-                I am a big fan of 'do it once do it right' but this has not been the case for this project. As mentioned, this is my sandbox so I will be constantly updating this so that codebase is exactly how I need/want it to be
-            </p>
-        </div>
-
-        <div class="content">
-            <h6 class="title is-6"></h6>
-
-        </div>
-
-
-    </div>
-
-    <div class="has-text-centered">
-        <a class="button">
-            <span class="icon"><i class="fab fa-github"></i></span>
-            <span>View on GitHub</span>
-        </a>
-    </div>
-</div>
