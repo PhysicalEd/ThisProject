@@ -108,7 +108,18 @@
             HasRenderedSkills = true;
        }
     });
+
     console.log("You should hire me");
+
+    if (IndexModel.IsValidated) {
+        setTimeout(function () {
+                $.get("/home/landing",
+                    function (data) {
+                        OpenModal(data, "Welcome!");
+                    });
+            },
+            1000);
+    }
 
 });
 
