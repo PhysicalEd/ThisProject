@@ -194,6 +194,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\all.min.css" />
     <Content Include="Content\fontawesome.min.css" />
     <Content Include="Content\img\dancer.jpg" />
     <Content Include="Content\img\dancinguni1.jpg" />

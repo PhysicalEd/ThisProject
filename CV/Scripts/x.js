@@ -83,11 +83,6 @@
 
             MyLife: function (event) {
                 MyLife(event.currentTarget);
-
-
-                //this.$mount('#vue-instance');
-                //console.log(app);
-
             },
             ShowReferences: function (event) { ShowReferences(event.currentTarget) },
             RenderSkillsInYears: RenderSkillsInYears,
@@ -113,16 +108,7 @@
             HasRenderedSkills = true;
        }
     });
-    console.log("IndexModel", IndexModel);
-    if (IndexModel.IsValidated) {
-        setTimeout(function() {
-                $.get("/home/landing",
-                    function(data) {
-                        OpenModal(data, "Welcome!");
-                    });
-            },
-            1000);
-    }
+    console.log("You should hire me");
 
 });
 
