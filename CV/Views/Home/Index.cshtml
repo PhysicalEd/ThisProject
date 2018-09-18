@@ -1,16 +1,16 @@
 ﻿@model CV.Models.HomeModel
 <link rel="stylesheet" href="~/Content/xindex.css">
 
-@*<script>
-    var IndexModel = @Html.Raw(Json.Encode(Model));
-</script>*@
+<script>
+    let IndexModel = @Html.Raw(Json.Encode(Model));
+</script>
 
 <div id="IndexPage">
 
 @*Intro*@
 <div class="hero is-fullheight has-background-grey-lighter" id="IntroSection" v-backgroundimage="'me.jpg'">
     <div class="is-div-centered has-text-centered">
-        <h1 id="KiaOra" class="title has-no-bottom-margin">Kia Ora! I'm Ed.</h1>
+        <h1 id="KiaOra" class="title has-no-bottom-margin">Kia ora! I'm Ed.</h1>
 
         <div class="has-text-centered" >
             <a class="subtitle button button-animation has-text-weight-bold" v-on:click="MyLife">
@@ -218,16 +218,17 @@
                     To say that I am “good” or “not so good”, is limiting. Instead, I can show the <a href="#Skills" v-on:click="RenderSkillsInYears">number of years</a> I've had the opportunity to hone these skills.
                 </p>
             </div>
-            <div v-show="!IsJoking">
+            <div  v-show="!IsJoking">
                 <p>
                     Although… even the number of years don't count for much. What really matters is how much an individual has learned in those years. I believe this can only be seen through one’s work and hard earned references.
                 </p>
-                <div class="has-text-centered">
-                    <a class="subtitle button button-animation" v-on:click="ShowReferences">
-                        <span>See what people say about me</span>
-                        <span class="icon is-small"> <i class="fas fa-angle-double-right"></i></span>
-                    </a>
-                </div>
+            </div>
+            <br/>
+            <div class="has-text-centered">
+                <a class="subtitle button button-animation" v-on:click="ShowReferences">
+                    <span>Read what people say about me</span>
+                    <span class="icon is-small"> <i class="fas fa-angle-double-right"></i></span>
+                </a>
             </div>
 
         </div>

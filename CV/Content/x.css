@@ -197,7 +197,7 @@ body {
 }*/
 
 .grayscale {
-    /*-webkit-filter: grayscale(1);*/
+    -webkit-filter: grayscale(1);
 }
 
 .description {

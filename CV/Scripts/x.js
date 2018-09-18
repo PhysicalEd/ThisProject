@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    var IndexModel = null;
+    //var IndexModel = null;
     var HasRenderedSkills = false;
 
 
@@ -56,7 +56,6 @@
     let app = new Vue({
         el: '#vue-instance',
         props: {
-                
         },
         data: {
             IndexModel: IndexModel,
@@ -92,15 +91,13 @@
             },
             ShowReferences: function (event) { ShowReferences(event.currentTarget) },
             RenderSkillsInYears: RenderSkillsInYears,
-            Back: function () { window.history.back(); },
             ChangePersona: function() {
                 var personas = ['father', 'husband', 'dancer', 'photography enthusiast'];
                 var randomNumber = Math.floor((Math.random() * (personas.length)));
                 this.CurrentPersona = personas[randomNumber];
             },
-            ResetPersona: function () { this.CurrentPersona = "software developer" },
+            ResetPersona: function () { this.CurrentPersona = "software developer" }
             //LoadGitHub: function (projectName) { LoadGitHub(projectName) }
-            LoadGitHub: function () { alert("test") }
 
         }
     });
@@ -116,6 +113,17 @@
             HasRenderedSkills = true;
        }
     });
+    console.log("IndexModel", IndexModel);
+    if (IndexModel.IsValidated) {
+        setTimeout(function() {
+                $.get("/home/landing",
+                    function(data) {
+                        OpenModal(data, "Welcome!");
+                    });
+            },
+            1000);
+    }
+
 });
 
 function OpenModal(data, cardTitle) {
@@ -143,9 +151,7 @@ function LoadGitHub(projectName) {
 
 
 function Test() {
-    $.get("/home/landing", function (data) {
-        OpenModal(data, "Welcome");
-    });
+    
 }
 
 function LoadContent(el, projectName) {
@@ -174,6 +180,7 @@ function CloseModal() {
     $('html').removeClass('modal-open');
     $('body').removeClass('modal-open');
 
+    $('.modal-card-title').html("");
 }
 
 function AnimateSkills() {

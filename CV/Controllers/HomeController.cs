@@ -14,17 +14,18 @@ namespace CV.Controllers
             return PartialView();
         }
 
-        public ActionResult Index(Guid? employerID)
+        public ActionResult Index(string employerID)
         {
             var model = new HomeModel();
-            //if (!string.IsNullOrWhiteSpace(employerID))
-            if (employerID.HasValue)
+            if (!string.IsNullOrWhiteSpace(employerID))
             {
-                model.EmployerID = employerID.GetValueOrDefault();
-                switch (employerID.ToString())
+                model.EmployerID = employerID;
+                switch (model.EmployerID)
                 {
                     case "0ED6E64A-EECD-48FC-ADF2-FB463E103D95":
+                        model.EmployerName = "Ed";
                         model.EmployerCompany = "EdenCo";
+                        model.IsValidated = true;
                         break;
                 }
             }

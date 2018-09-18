@@ -1,6 +1,24 @@
-﻿<div class="section-margin">
-    <h1 class="title is-1">Hi <span v-html=""></span>,  Welcome to my page.</h1>
+﻿<script src="/Scripts/Index.js"></script>
+<div id="LandingInstance" class="section-margin">
+    <h1 class="title is-1">Hi <span v-html="EmployerCompany"></span></h1>
     <div class="content">
-        
+        <p>
+            Apologies for the extra clicks, but I really encourage you to go through my personal site and get to know me better. 
+        </p>
+        <p>
+            They (I) say you should hire the person, not the skills. <i class="far fa-smile"></i>
+        </p>
+    </div>
+    
+    <div class="content">
+        <p>
+            I don't want to see your website, it'll probably be rubbish anyway. 
+        </p>
+        <div class="has-text-centered">
+
+            <a class="button button-animation is-medium has-text-weight-bold is-fullwidth" v-on:click="DownloadCV">
+                I just want your CV
+            </a>
+        </div>
     </div>
 </div>
