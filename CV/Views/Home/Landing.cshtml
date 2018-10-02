@@ -2,7 +2,7 @@
 <div id="LandingInstance" class="section-margin">
     <h1 class="title is-1">Hi <span v-html="EmployerCompany"></span></h1>
     <div class="content">
-        <p>
+        <p v-show="EmployerPosition != ''">
             Please accept my application for the <span v-html="EmployerPosition"></span>
         </p>
         <p>

@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+
     let landing = new Vue({
         el: '#LandingInstance',
         data: {
