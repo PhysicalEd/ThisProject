@@ -3,7 +3,10 @@
     <h1 class="title is-1">Hi <span v-html="EmployerCompany"></span></h1>
     <div class="content">
         <p>
-            Apologies for the extra clicks, but I really encourage you to go through my personal site and get to know me better. Take a look at my projects and what people say about me
+            Please accept my application for the <span v-html="EmployerPosition"></span>
+        </p>
+        <p>
+            Apologies for the extra clicks, but I really encourage you to go through my personal site and get to know me better. Take a look at my projects and what my employers have said about me
         </p>
         <p>
             They (I) say you should hire the person, not the skills. <i class="far fa-smile"></i>
@@ -12,6 +15,9 @@
     
     <div class="content">
         <div class="has-text-centered">
+            <a class="button is-primary button-animation has-text-weight-bold" v-on:click="CloseModal">
+                <span>Yes, I want to get to know you</span>
+            </a>
             <a class="button button-animation has-text-weight-bold has-background-grey-lighter" v-on:click="DownloadCV">
                 <span>Naaah, just take me to your CV</span>
             </a>

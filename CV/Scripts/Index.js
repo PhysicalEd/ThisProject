@@ -2,7 +2,8 @@
     let landing = new Vue({
         el: '#LandingInstance',
         data: {
-            EmployerCompany: IndexModel.EmployerCompany
+            EmployerCompany: IndexModel.EmployerCompany,
+            EmployerPosition: IndexModel.EmployerPosition
         },
         methods: {
             DownloadCV: function () {
